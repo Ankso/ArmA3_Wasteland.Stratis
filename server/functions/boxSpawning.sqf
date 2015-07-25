@@ -27,7 +27,7 @@ _boxList =
 	if (random 1 < 0.50) then // 50% chance of box spawning at each town
 	{
 		_pos = getMarkerPos (_x select 0);
-		_boxClass = _boxList call BIS_fnc_selectRandom;
+		_boxClass = _boxList call SGC_fnc_selectRandom;
 		_safePos = [_pos, 10, (_x select 1) / 2, 1, 0, 60 * (pi / 180), 0] call findSafePos; // spawns somewhere within half the town radius
 		_box = createVehicle [_boxClass, _safePos, [], 0, "NONE"];
 		_box allowDamage false;

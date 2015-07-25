@@ -13,6 +13,22 @@ player createDiarySubject ["credits", "Credits"];
 
 player createDiaryRecord ["changelog",
 [
+"Hardcore v1.1 BETA",
+"
+<br/> [Added] Dynamic loot system: you won't fin the same kind of weapons in civilian vs military vehicles
+<br/> [Removed] Removed MBTs and heavy attack helicopters
+<br/> [Changed] Improved spawn locations
+<br/> [Changed] Modified (and marked on the map) helicopter/planes (re)spawns
+<br/> [Changed] All weapons and prices in the stores
+<br/> [Changed] Spawn loadouts
+<br/> [Changed] Balanced long range fighting
+<br/> And much more that you'll have to discover!
+
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
 "v1.0b",
 "
 <br/> [Added] Helicopters DLC content

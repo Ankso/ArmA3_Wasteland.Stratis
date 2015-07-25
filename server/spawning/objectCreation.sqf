@@ -9,7 +9,7 @@ if (!isServer) exitWith {};
 private ["_objPos", "_objClass", "_obj", "_adjustZ", "_pos"];
 _objPos = _this select 0;
 
-_objClass = objectList call BIS_fnc_selectRandom;
+_objClass = objectList call SGC_fnc_selectRandom;
 _obj = createVehicle [_objClass, _objPos, [], 50, "None"];
 
 switch (true) do

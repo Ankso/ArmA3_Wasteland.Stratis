@@ -30,9 +30,9 @@ _setupObjects =
 	else
 	{
 		[
-			["B_Quadbike_01_F", "C_Van_01_box_F", "B_Quadbike_01_F"],
-			["I_G_Offroad_01_F", "I_Truck_02_transport_F", "I_G_Offroad_01_F"]
-		] call BIS_fnc_selectRandom;
+			["B_MRAP_01_F", "I_Truck_02_covered_F", "B_G_Offroad_01_F"],
+			["B_G_Offroad_01_F", "I_Truck_02_transport_F", "B_G_Offroad_01_F"]
+		] call SGC_fnc_selectRandom;
 	};
 
 	_veh1 = _convoyVeh select 0;
@@ -70,6 +70,15 @@ _setupObjects =
 			case (_type isKindOf "C_Van_01_box_F"):
 			{
 				[_vehicle, "\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_01_CO.paa", [0]] call applyVehicleTexture; // Apply camo instead of civilian color
+			};
+			case (_type isKindOf "Truck"):
+			{
+                for [{_i = 0}, {_i < 6}, {_i = _i + 1}] do
+                {
+                    _soldier = [_aiGroup, _position] call createRandomSoldier;
+                    _soldier assignAsCargoIndex [_vehicle, _i];
+                    _soldier moveInCargo _vehicle;
+                };
 			};
 		};
 
@@ -131,11 +140,11 @@ _successExec =
 	// Mission completed
 	_box1 = createVehicle ["Box_NATO_Wps_F", _lastPos, [], 2, "None"];
 	_box1 setDir random 360;
-	[_box1, "mission_USSpecial2"] call fn_refillbox;
+	[_box1, "mission_USLaunchers"] call fn_refillbox;
 
 	_box2 = createVehicle ["Box_East_WpsSpecial_F", _lastPos, [], 2, "None"];
 	_box2 setDir random 360;
-	[_box2, "mission_USLaunchers"] call fn_refillbox;
+	[_box2, (["mission_USSpecial", "mission_Main_A3snipers"] call SGC_fnc_selectRandom)] call fn_refillbox;
 
 	_successHintMessage = "The convoy has been stopped, the weapon crates and vehicles are now yours to take.";
 };

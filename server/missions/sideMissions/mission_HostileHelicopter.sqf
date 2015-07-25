@@ -17,15 +17,15 @@ _setupVars =
 
 _setupObjects =
 {
-	_missionPos = markerPos (((call cityList) call BIS_fnc_selectRandom) select 0);
+	_missionPos = markerPos (((call cityList) call SGC_fnc_selectRandom) select 0);
 
 	_vehicleClass = if (missionDifficultyHard) then
 	{
-		["B_Heli_Attack_01_F", "O_Heli_Attack_02_black_F"] call BIS_fnc_selectRandom;
+		["B_Heli_Attack_01_F", "O_Heli_Attack_02_black_F"] call SGC_fnc_selectRandom;
 	}
 	else
 	{
-		["B_Heli_Light_01_armed_F", "O_Heli_Light_02_F", "I_Heli_light_03_F"] call BIS_fnc_selectRandom;
+		["B_Heli_Light_01_armed_F", "O_Heli_Light_02_F", "I_Heli_light_03_F"] call SGC_fnc_selectRandom;
 	};
 
 	_createVehicle =

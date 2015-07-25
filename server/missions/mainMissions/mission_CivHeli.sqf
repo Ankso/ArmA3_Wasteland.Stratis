@@ -13,10 +13,10 @@ private ["_vehicleClass", "_nbUnits"];
 
 _setupVars =
 {
-	_vehicleClass = ["I_Heli_Transport_02_F", "B_Heli_Transport_03_unarmed_F", "O_Heli_Transport_04_F"] call BIS_fnc_selectRandom;
+	_vehicleClass = ["I_Heli_Transport_02_F", "O_Heli_Light_02_unarmed_F", "B_Heli_Light_01_F"] call SGC_fnc_selectRandom;
 
 	_missionType = "Transport Helicopter";
-	_locationsArray = MissionSpawnMarkers;
+	_locationsArray = MainMissionSpawnMarkers;
 
 	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
 };

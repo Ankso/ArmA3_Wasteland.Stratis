@@ -34,31 +34,14 @@ if (!isNil "_sender" && {side _newGroup == playerSide}) then
 {
 	_oldGroup = group player;
 
-	_oldTerritories = _oldGroup getVariable ["currentTerritories", []];
-	_newTerritories = _newGroup getVariable ["currentTerritories", []];
-
-	{ _newTerritories pushBack _x } forEach _oldTerritories;
-
 	[player] join _newGroup;
 	waitUntil {_newGroup = group player; _newGroup != _oldGroup};
-
-	_newGroup setVariable ["currentTerritories", _newTerritories, true];
 
 	if (_newGroup == group _sender) then
 	{
 		pvar_processGroupInvite = ["accept", _playerUID];
 		publicVariableServer "pvar_processGroupInvite";
 	};
-
-	if (!isNull _oldGroup) then
-	{
-		_oldGroup setVariable ["currentTerritories", [], true];
-	};
-
-	pvar_convertTerritoryOwner = [_newTerritories, _newGroup];
-	publicVariableServer "pvar_convertTerritoryOwner";
-
-	[_newTerritories, false, _newGroup, true] call updateTerritoryMarkers;
 
 	player globalChat "You have accepted the invite.";
 	player setVariable ["currentGroupRestore", _newGroup, true];

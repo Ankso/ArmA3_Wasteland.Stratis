@@ -4,8 +4,8 @@
 //	@file Name: vehicleHandleDamage.sqf
 //	@file Author: AgentRev
 
-#define COLLISION_DMG_SCALE 0.2
-#define PLANE_COLLISION_DMG_SCALE 0.5
+#define COLLISION_DMG_SCALE 0.35
+#define PLANE_COLLISION_DMG_SCALE 1
 #define WHEEL_COLLISION_DMG_SCALE 0.05
 #define MRAP_MISSILE_DMG_SCALE 4.0 // Temporary fix for http://feedback.arma3.com/view.php?id=21743
 #define HELI_MISSILE_DMG_SCALE 5.0
@@ -50,45 +50,12 @@ if (_selection != "?") then
 
 		switch (true) do
 		{
-			// If vehicle is heli and projectile is missile then multiply damage
-			case (_isHeli):
-			{
-				if (_isMissile) then
-				{
-					_damage = ((_damage - _oldDamage) * HELI_MISSILE_DMG_SCALE) + _oldDamage;
-				};
-			};
-
 			// If vehicle is plane and projectile is missile then multiply damage
 			case (_isPlane):
 			{
 				if (_isMissile) then
 				{
 					_damage = ((_damage - _oldDamage) * PLANE_MISSILE_DMG_SCALE) + _oldDamage;
-				};
-			};
-
-			// If vehicle is tank then multiply damage
-			case (_vehicle isKindOf "Tank"):
-			{
-				//if (_isMissile) then
-				//{
-					_scale = if ({_vehicle isKindOf _x} count ["APC_Tracked_01_base_F", "APC_Tracked_02_base_F", "APC_Tracked_03_base_F"] > 0) then {
-						IFV_DMG_SCALE
-					} else {
-						TANK_DMG_SCALE
-					};
-
-					_damage = ((_damage - _oldDamage) * _scale) + _oldDamage;
-				//};
-			};
-
-			// If vehicle is MRAP and projectile is missile then multiply damage
-			case ({_vehicle isKindOf _x} count ["MRAP_01_base_F", "MRAP_02_base_F", "MRAP_03_base_F"] > 0):
-			{
-				if (_isMissile) then
-				{
-					_damage = ((_damage - _oldDamage) * MRAP_MISSILE_DMG_SCALE) + _oldDamage;
 				};
 			};
 		};

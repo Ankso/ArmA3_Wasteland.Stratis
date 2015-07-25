@@ -51,7 +51,7 @@ _staticWeapons = [];
 	// Are there still units available?
 	if (count _units > 0) then
 	{
-		_unit = _units call BIS_fnc_selectRandom;
+		_unit = _units call SGC_fnc_selectRandom;
 		_unit assignAsGunner _x;
 		_unit moveInGunner _x;
 		_units = _units - [_unit];

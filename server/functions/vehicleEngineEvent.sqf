@@ -4,7 +4,7 @@
 //	@file Name: vehicleEngineEvent.sqf
 //	@file Author: AgentRev
 
-_veh = _this select 0;
+/*_veh = _this select 0;
 _running = _this select 1;
 
 if (local _veh && _running) then
@@ -17,4 +17,4 @@ if (local _veh && _running) then
 	{
 		_veh engineOn false;
 	};
-};
+};*/

@@ -69,7 +69,10 @@ mf_init =
 
 _clientFunc = "client\functions";
 _serverFunc = "server\functions";
+_common = "common\functions";
 
+SGC_fnc_selectRandom = [_common, "SGC_fnc_selectRandom.sqf"] call mf_compile;
+SGC_fnc_disableSimulation = [_serverFunc, "SGC_fnc_disableSimulation.sqf"] call mf_compile;
 A3W_fnc_pushVehicle = [_serverFunc, "pushVehicle.sqf"] call mf_compile;
 A3W_fnc_setName = [_clientFunc, "fn_setName.sqf"] call mf_compile;
 A3W_fnc_towingHelper = [_serverFunc, "towingHelper.sqf"] call mf_compile;
@@ -103,7 +106,6 @@ getHitPoints = [_serverFunc, "getHitPoints.sqf"] call mf_compile;
 getMagAmmoCount = [_serverFunc, "getMagAmmoCount.sqf"] call mf_compile;
 getMoveWeapon = [_clientFunc, "getMoveWeapon.sqf"] call mf_compile;
 getPublicVar = [_serverFunc, "getPublicVar.sqf"] call mf_compile;
-getTeamMarkerColor = "territory\client\getTeamMarkerColor.sqf" call mf_compile;
 isConfigOn = [_serverFunc, "isConfigOn.sqf"] call mf_compile;
 processMagazineCargo = [_serverFunc, "processMagazineCargo.sqf"] call mf_compile;
 relativePos = [_serverFunc, "relativePos.sqf"] call mf_compile;

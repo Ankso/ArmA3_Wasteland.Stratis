@@ -8,12 +8,10 @@
 //@file Description: The client init.
 
 if (isDedicated) exitWith {};
-
 if (!isServer) then
 {
 	waitUntil {!isNil "A3W_network_compileFuncs"};
 };
-
 waitUntil {!isNil "A3W_serverSetupComplete"};
 
 [] execVM "client\functions\bannedNames.sqf";
@@ -28,7 +26,6 @@ doCancelAction = false;
 //Initialization Variables
 playerCompiledScripts = false;
 playerSetupComplete = false;
-
 waitUntil {!isNull player};
 waitUntil {time > 0.1};
 
@@ -39,7 +36,6 @@ player switchMove "";
 "client\actions" call mf_init;
 "client\inventory" call mf_init;
 "client\items" call mf_init;
-
 //Call client compile list.
 call compile preprocessFileLineNumbers "client\functions\clientCompile.sqf";
 
@@ -90,15 +86,6 @@ if (isNil "playerData_alive") then
 player call playerSetupEnd;
 
 diag_log format ["Player starting with $%1", player getVariable ["cmoney", 0]];
-
-[] execVM "territory\client\hideDisabledTerritories.sqf";
-
-// Territory system enabled?
-if (count (["config_territory_markers", []] call getPublicVar) > 0) then
-{
-	A3W_fnc_territoryActivityHandler = "territory\client\territoryActivityHandler.sqf" call mf_compile;
-	[] execVM "territory\client\setupCaptureTriggers.sqf";
-};
 
 //Setup player menu scroll action.
 //[] execVM "client\clientEvents\onMouseWheel.sqf";

@@ -32,7 +32,7 @@ if (!isNil "_locationsArray") then
 		uiSleep 60;
 	};
 
-	_missionLocation = (_availableLocations call BIS_fnc_selectRandom) select 0;
+	_missionLocation = (_availableLocations call SGC_fnc_selectRandom) select 0;
 	[_locationsArray, _missionLocation, true] call setLocationState;
 	[_locationsArray, _missionLocation, markerPos _missionLocation] call cleanLocationObjects; // doesn't matter if _missionLocation is not a marker, the function will know
 };

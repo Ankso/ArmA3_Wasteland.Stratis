@@ -12,7 +12,7 @@ private ["_validLocations", "_selectedMarker", "_markerIndex"];
 
 _validLocations = [MissionSpawnMarkers, { !(_x select 1) }] call BIS_fnc_conditionalSelect;
 
-_selectedMarker = (_validLocations call BIS_fnc_selectRandom) select 0;
+_selectedMarker = (_validLocations call SGC_fnc_selectRandom) select 0;
 _markerIndex = [MissionSpawnMarkers, _selectedMarker] call BIS_fnc_findInPairs;
 
 (MissionSpawnMarkers select _markerIndex) set [1, true];

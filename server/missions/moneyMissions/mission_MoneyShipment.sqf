@@ -24,104 +24,92 @@ _setupVars =
 	[
 		// Easy
 		[
-			"Small Money Shipment", // Marker text
-			25000, // Money
+			"Money Shipment", // Marker text
+			15000, // Money
 			[
 				[ // NATO convoy
-					["B_MRAP_01_hmg_F", "B_MRAP_01_gmg_F"], // Veh 1
-					["B_MRAP_01_hmg_F", "B_MRAP_01_gmg_F"] // Veh 2
+					["B_MRAP_01_F", "B_MRAP_01_hmg_F"], // Veh 1
+					["B_Truck_01_transport_F", "B_Truck_01_covered_F"] // Veh 2
 				],
 				[ // CSAT convoy
-					["O_MRAP_02_hmg_F", "O_MRAP_02_gmg_F"], // Veh 1
-					["O_MRAP_02_hmg_F", "O_MRAP_02_gmg_F"] // Veh 2
+					["O_MRAP_02_F", "O_MRAP_02_hmg_F"], // Veh 1
+					["O_Truck_02_transport_F", "O_Truck_02_covered_F"] // Veh 2
 				],
 				[ // AAF convoy
-					["I_MRAP_03_hmg_F", "I_MRAP_03_gmg_F"], // Veh 1
-					["I_MRAP_03_hmg_F", "I_MRAP_03_gmg_F"] // Veh 2
+					["I_MRAP_03_F", "I_MRAP_03_hmg_F"], // Veh 1
+					["I_Truck_02_transport_F", "I_Truck_02_covered_F"] // Veh 2
 				]
 			]
 		],
 		// Medium
 		[
-			"Medium Money Shipment", // Marker text
-			50000, // Money
+			"Money Shipment", // Marker text
+			15000, // Money
 			[
 				[ // NATO convoy
-					["B_MRAP_01_hmg_F", "B_MRAP_01_gmg_F"], // Veh 1
-					["B_APC_Wheeled_01_cannon_F", "B_APC_Tracked_01_rcws_F", "B_APC_Tracked_01_AA_F"], // Veh 2
-					["B_MRAP_01_hmg_F", "B_MRAP_01_gmg_F"] // Veh 3
+					["B_MRAP_01_F", "B_MRAP_01_hmg_F"], // Veh 1
+					["B_Truck_01_transport_F", "B_Truck_01_covered_F"] // Veh 2
 				],
 				[ // CSAT convoy
-					["O_MRAP_02_hmg_F", "O_MRAP_02_gmg_F"], // Veh 1
-					["O_APC_Wheeled_02_rcws_F", "O_APC_Tracked_02_cannon_F", "O_APC_Tracked_02_AA_F"], // Veh 2
-					["O_MRAP_02_hmg_F", "O_MRAP_02_gmg_F"] // Veh 3
+					["O_MRAP_02_F", "O_MRAP_02_hmg_F"], // Veh 1
+					["O_Truck_02_transport_F", "O_Truck_02_covered_F"] // Veh 2
 				],
 				[ // AAF convoy
-					["I_MRAP_03_hmg_F", "I_MRAP_03_gmg_F"], // Veh 1
-					["I_APC_Wheeled_03_cannon_F", "I_APC_tracked_03_cannon_F"], // Veh 2
-					["I_MRAP_03_hmg_F", "I_MRAP_03_gmg_F"] // Veh 3
+					["I_MRAP_03_F", "I_MRAP_03_hmg_F"], // Veh 1
+					["I_Truck_02_transport_F", "I_Truck_02_covered_F"] // Veh 2
 				]
 			]
 		],
 		// Hard
 		[
-			"Large Money Shipment", // Marker text
-			75000, // Money
+			"Money Shipment", // Marker text
+			15000, // Money
 			[
 				[ // NATO convoy
-					["B_APC_Wheeled_01_cannon_F", "B_APC_Tracked_01_rcws_F", "B_APC_Tracked_01_AA_F"], // Veh 1
-					["B_MBT_01_cannon_F", "B_MBT_01_TUSK_F"], // Veh 2
-					["B_APC_Wheeled_01_cannon_F", "B_APC_Tracked_01_rcws_F", "B_APC_Tracked_01_AA_F"] // Veh 3
+					["B_MRAP_01_F", "B_MRAP_01_hmg_F"], // Veh 1
+					["B_Truck_01_transport_F", "B_Truck_01_covered_F"] // Veh 2
 				],
 				[ // CSAT convoy
-					["O_APC_Wheeled_02_rcws_F", "O_APC_Tracked_02_cannon_F", "O_APC_Tracked_02_AA_F"], // Veh 1
-					["O_MBT_02_cannon_F"], // Veh 2
-					["O_APC_Wheeled_02_rcws_F", "O_APC_Tracked_02_cannon_F", "O_APC_Tracked_02_AA_F"] // Veh 3
+					["O_MRAP_02_F", "O_MRAP_02_hmg_F"], // Veh 1
+					["O_Truck_02_transport_F", "O_Truck_02_covered_F"] // Veh 2
 				],
 				[ // AAF convoy
-					["I_APC_Wheeled_03_cannon_F", "I_APC_tracked_03_cannon_F"], // Veh 1
-					["I_MBT_03_cannon_F"], // Veh 2
-					["I_APC_Wheeled_03_cannon_F", "I_APC_tracked_03_cannon_F"] // Veh 3
+					["I_MRAP_03_F", "I_MRAP_03_hmg_F"], // Veh 1
+					["I_Truck_02_transport_F", "I_Truck_02_covered_F"] // Veh 2
 				]
 			]
 		],
 		// Extreme
 		[
-			"Heavy Money Shipment", // Marker text
-			100000, // Money
+			"Money Shipment", // Marker text
+			15000, // Money
 			[
 				[ // NATO convoy
-					["B_APC_Wheeled_01_cannon_F", "B_APC_Tracked_01_rcws_F", "B_APC_Tracked_01_AA_F", "B_MBT_01_cannon_F", "B_MBT_01_TUSK_F"], // Veh 1
-					["B_APC_Tracked_01_AA_F", "B_MBT_01_cannon_F", "B_MBT_01_TUSK_F"], // Veh 2
-					["B_APC_Wheeled_01_cannon_F", "B_APC_Tracked_01_rcws_F", "B_APC_Tracked_01_AA_F", "B_MBT_01_cannon_F", "B_MBT_01_TUSK_F"], // Veh 3
-					["B_APC_Wheeled_01_cannon_F", "B_APC_Tracked_01_rcws_F", "B_APC_Tracked_01_AA_F", "B_MBT_01_cannon_F", "B_MBT_01_TUSK_F"] // Veh 4
+					["B_MRAP_01_F", "B_MRAP_01_hmg_F"], // Veh 1
+					["B_Truck_01_transport_F", "B_Truck_01_covered_F"] // Veh 2
 				],
 				[ // CSAT convoy
-					["O_APC_Wheeled_02_rcws_F", "O_APC_Tracked_02_cannon_F", "O_APC_Tracked_02_AA_F", "O_MBT_02_cannon_F"], // Veh 1
-					["O_APC_Tracked_02_AA_F", "O_MBT_02_cannon_F"], // Veh 2
-					["O_APC_Wheeled_02_rcws_F", "O_APC_Tracked_02_cannon_F", "O_APC_Tracked_02_AA_F", "O_MBT_02_cannon_F"], // Veh 3
-					["O_APC_Wheeled_02_rcws_F", "O_APC_Tracked_02_cannon_F", "O_APC_Tracked_02_AA_F", "O_MBT_02_cannon_F"] // Veh 4
+					["O_MRAP_02_F", "O_MRAP_02_hmg_F"], // Veh 1
+					["O_Truck_02_transport_F", "O_Truck_02_covered_F"] // Veh 2
 				],
 				[ // AAF convoy
-					["I_APC_Wheeled_03_cannon_F", "I_APC_tracked_03_cannon_F", "I_MBT_03_cannon_F"], // Veh 1
-					["I_APC_tracked_03_cannon_F", "I_MBT_03_cannon_F"], // Veh 2
-					["I_APC_Wheeled_03_cannon_F", "I_APC_tracked_03_cannon_F", "I_MBT_03_cannon_F"], // Veh 3
-					["I_APC_Wheeled_03_cannon_F", "I_APC_tracked_03_cannon_F", "I_MBT_03_cannon_F"] // Veh 4
+					["I_MRAP_03_F", "I_MRAP_03_hmg_F"], // Veh 1
+					["I_Truck_02_transport_F", "I_Truck_02_covered_F"] // Veh 2
 				]
 			]
 		]
 	]
-	call BIS_fnc_selectRandom;
+	call SGC_fnc_selectRandom;
 
 	_missionType = _MoneyShipment select 0;
 	_moneyAmount = _MoneyShipment select 1;
 	_convoys = _MoneyShipment select 2;
-	_vehChoices = _convoys call BIS_fnc_selectRandom;
+	_vehChoices = _convoys call SGC_fnc_selectRandom;
 
 	_moneyText = format ["$%1", [_moneyAmount] call fn_numbersText];
 
 	_vehClasses = [];
-	{ _vehClasses pushBack (_x call BIS_fnc_selectRandom) } forEach _vehChoices;
+	{ _vehClasses pushBack (_x call SGC_fnc_selectRandom) } forEach _vehChoices;
 };
 
 _setupObjects =

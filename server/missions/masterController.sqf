@@ -6,9 +6,9 @@
 
 _ctrlTypes =
 [
+	"sideMission",
 	"mainMission",
-	"moneyMission",
-	"sideMission"
+	"moneyMission"
 ];
 
 _ctrlQuantity = (["A3W_missionsQuantity", 6] call getPublicVar) max 0 min 6;
@@ -75,7 +75,7 @@ if (_ctrlQuantity > _nbTypes) then
 
 					if (count _availables > 0) then
 					{
-						_current = _availables call BIS_fnc_selectRandom;
+						_current = _availables call SGC_fnc_selectRandom;
 
 						if !(_current select 2) then
 						{

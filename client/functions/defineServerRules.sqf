@@ -12,5 +12,5 @@ if !(player diarySubjectExists "rules") then
 {
 	waitUntil {player diarySubjectExists "credits"};
 	player createDiarySubject ["rules", "Server Rules"];
-	player createDiaryRecord ["rules", ["Rules", _this select 0]];
+	player createDiaryRecord ["rules", ["Rules", "No cheating/scripting/etc :)"]];
 };

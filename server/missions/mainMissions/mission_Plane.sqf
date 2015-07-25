@@ -1,5 +1,5 @@
 // ******************************************************************************************
-// * This project is licensed under the GNU Affero GPL v3. Copyright Â© 2014 A3Wasteland.com *
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Version: 1.0
 //	@file Name: mission_ArmedHeli.sqf
@@ -15,19 +15,18 @@ _setupVars =
 {
 	_vehicleClass =
 	[
-		"B_Heli_Light_01_armed_F",
-		"B_Heli_Light_01_armed_F",
-		"B_Heli_Transport_01_F",
-		"B_Heli_Transport_01_F",
-		"O_Heli_Light_02_F",
-		"O_Heli_Light_02_F",
-		"I_Heli_light_03_F"
+		"I_Plane_Fighter_03_AA_F",
+		"I_Plane_Fighter_03_CAS_F",
+		"B_Plane_CAS_01_F",
+		"O_Plane_CAS_02_F",
+		"I_Plane_Fighter_03_AA_F",
+		"I_Plane_Fighter_03_CAS_F"
 	] call SGC_fnc_selectRandom;
 
-	_missionType = "Armed Helicopter";
-	_locationsArray = MainMissionSpawnMarkers;
+	_missionType = "Armed Jet";
+	_locationsArray = PlaneMissionMarkers;
 
-	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
+	_nbUnits = AI_GROUP_LARGE;
 };
 
 _this call mission_VehicleCapture;

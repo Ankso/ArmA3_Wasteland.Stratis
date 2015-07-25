@@ -27,13 +27,13 @@ _createRandomVehicle =
 	_maxrad = _this select 2;
 	_counter = _this select 3;
 
-	_num = random 100;
+	_rnd = floor (random 100);
 
 	switch (true) do
 	{
-		case (_num < 15): { _vehicleType = mediumMilitaryVehicles call BIS_fnc_selectRandom };
-		case (_num < 50): { _vehicleType = lightMilitaryVehicles call BIS_fnc_selectRandom };
-		default           { _vehicleType = civilianVehicles call BIS_fnc_selectRandom };
+		case (_rnd < 2): { _vehicleType = mediumMilitaryVehicles call SGC_fnc_selectRandom };
+		case (_rnd < 9): { _vehicleType = lightMilitaryVehicles call SGC_fnc_selectRandom };
+		default          { _vehicleType = civilianVehicles call SGC_fnc_selectRandom };
 	};
 
 	if (_vehicleType isKindOf "Quadbike_01_base_F") then {

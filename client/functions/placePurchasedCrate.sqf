@@ -26,7 +26,7 @@ _createCrate =
 	_storeOwnerID = _this select 1;
 	_storeOwnerName = _this select 2;
 
-	_class = _classes call BIS_fnc_selectRandom;
+	_class = _classes call SGC_fnc_selectRandom;
 	_playerPos = getPos player;
 	_sbox = createVehicle [_class,[(_playerPos select 0), (_playerPos select 1),0],[], 0, "NONE"];
 	_sbox allowDamage false;

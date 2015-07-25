@@ -30,7 +30,7 @@ _items = _this select 1;
 				{
 					for "_i" from 1 to _quantity do
 					{
-						_randomClass = _class call BIS_fnc_selectRandom;
+						_randomClass = _class call SGC_fnc_selectRandom;
 						_vehicle addWeaponCargoGlobal [_randomClass, 1];
 
 						if (_magsQty > 0) then
@@ -57,7 +57,7 @@ _items = _this select 1;
 				{
 					for "_i" from 1 to _quantity do
 					{
-						_randomClass = _class call BIS_fnc_selectRandom;
+						_randomClass = _class call SGC_fnc_selectRandom;
 						_vehicle addMagazineCargoGlobal [_randomClass, 1];
 					};
 				}
@@ -72,7 +72,7 @@ _items = _this select 1;
 				{
 					for "_i" from 1 to _quantity do
 					{
-						_randomClass = _class call BIS_fnc_selectRandom;
+						_randomClass = _class call SGC_fnc_selectRandom;
 						_vehicle addItemCargoGlobal [_randomClass, 1];
 					};
 				}

@@ -19,11 +19,13 @@ currentStaticHelis = []; // Storage for the heli marker numbers so that we don't
 civilianVehicles =
 [
 	"C_Quadbike_01_F",
+	"C_Quadbike_01_F",
 	"C_Hatchback_01_F",
 	"C_Hatchback_01_sport_F",
 	"C_SUV_01_F",
 	"C_Offroad_01_F",
-	"I_G_Offroad_01_F",
+	"C_Offroad_01_F",
+	"C_Offroad_01_F",
 	"C_Van_01_box_F",
 	"C_Van_01_transport_F"
 ];
@@ -31,48 +33,34 @@ civilianVehicles =
 //Light Military Vehicle List - Random Spawns
 lightMilitaryVehicles =
 [
-	"B_Quadbike_01_F",
-	"O_Quadbike_01_F",
-	"I_Quadbike_01_F",
-	"I_G_Quadbike_01_F",
-//	"O_Truck_02_covered_F",
-//	"I_Truck_02_covered_F",
-//	"O_Truck_02_transport_F",
-//	"I_Truck_02_transport_F",
-	"I_G_Offroad_01_armed_F"
+	"I_MRAP_03_F",
+	"B_MRAP_01_F",
+	"I_Truck_02_covered_F",
+	"I_Truck_02_transport_F",
+	"B_G_Offroad_01_F",
+	"B_Truck_01_covered_F",
+	"B_Truck_01_transport_F",
+	"B_G_Offroad_01_F",
+	"B_G_Offroad_01_F",
+	"B_G_Offroad_01_F",
+	"B_G_Offroad_01_F",
+	"B_G_Offroad_01_F"
 ];
 
 //Medium Military Vehicle List - Random Spawns
 mediumMilitaryVehicles =
 [
-//	"I_Truck_02_Fuel_F",
-//	"O_Truck_02_Fuel_F",
-//	"I_Truck_02_medical_F",
-//	"O_Truck_02_medical_F",
-	"B_MRAP_01_F",
-	"O_MRAP_02_F",
-	"I_MRAP_03_F"
+    "B_G_Offroad_01_armed_F"
 ];
 
 //Water Vehicles - Random Spawns
 waterVehicles =
 [
-//	"B_Lifeboat",
-//	"O_Lifeboat",
-//	"C_Rubberboat",
-//	"B_SDV_01_F",
-//	"O_SDV_01_F",
-//	"I_SDV_01_F",
-//	"B_Boat_Transport_01_F",
-//	"O_Boat_Transport_01_F",
-//	"I_Boat_Transport_01_F",
-//	"I_G_Boat_Transport_01_F",
-	"B_Boat_Armed_01_minigun_F",
-	"O_Boat_Armed_01_hmg_F",
-	"I_Boat_Armed_01_minigun_F",
 	"C_Boat_Civil_01_F",
 	"C_Boat_Civil_01_police_F",
-	"C_Boat_Civil_01_rescue_F"
+	"C_Boat_Civil_01_rescue_F",
+	"I_Boat_Transport_01_F",
+	"O_Lifeboat"
 ];
 
 //Object List - Random Spawns.
@@ -135,7 +123,9 @@ staticHeliList =
 	"B_Heli_Light_01_F",
 	"B_Heli_Light_01_F",
 	"O_Heli_Light_02_unarmed_F",
-	"I_Heli_light_03_unarmed_F"
+	"I_Heli_light_03_unarmed_F",
+	"I_Heli_Transport_02_F",
+	"C_Heli_Light_01_civil_F"
 ];
 
 //Object List - Random Planes.
@@ -143,60 +133,171 @@ staticPlaneList =
 [
 	"B_Plane_CAS_01_F",
 	"O_Plane_CAS_02_F",
-	"I_Plane_Fighter_03_CAS_F"
+	"I_Plane_Fighter_03_CAS_F",
+	"I_Plane_Fighter_03_AA_F"
 ];
 
-//Random Weapon List - Change this to what you want to spawn in cars.
+//Random Weapon List - Change this to what you want to spawn in cars
 vehicleWeapons =
 [
-//	"hgun_P07_F",
-//	"hgun_Rook40_F",
-//	"hgun_ACPC2_F",
-//	"arifle_SDAR_F",
-	"SMG_01_F",	// Vermin .45 ACP
-	"SMG_02_F",	// Sting 9mm
+    // -- Handguns --
+	"hgun_Rook40_F",
+	"hgun_ACPC2_F",
 	"hgun_PDW2000_F",
-	"arifle_TRG20_F",
-	"arifle_TRG21_F",
-	"arifle_TRG21_GL_F",
-	"arifle_Mk20C_F",
+	"hgun_Pistol_heavy_02_F",
+	"hgun_Pistol_heavy_01_F",
+	
+	// -- SMGs --
+	"SMG_01_F",
+	"SMG_02_F",
+	
+	// -- Assault Rifles --
+	"arifle_Mk20_F",
+	"arifle_SDAR_F",
+	"arifle_TRG20_F"
+];
+
+vehicleWeaponsMilitary =
+[
+    // -- SMGs --
+    "SMG_01_F",
+	"SMG_02_F",
+	"SMG_01_F",
+	"SMG_02_F",
+	"SMG_01_F",
+	"SMG_02_F",
+	"SMG_01_F",
+	"SMG_02_F",
+	"SMG_01_F",
+	"SMG_02_F",
+	"SMG_01_F",
+	"SMG_02_F",
+	"SMG_01_F",
+	"SMG_02_F",
+	
+	// -- Assault Rifles --
 	"arifle_Mk20_F",
 	"arifle_Mk20_GL_F",
-	"arifle_Katiba_F",
-	"arifle_Katiba_C_F",
-	"arifle_Katiba_GL_F",
-	"arifle_MXC_F",
-	"arifle_MX_F",
-	"arifle_MX_GL_F",
-	"arifle_MX_SW_F",
-	"arifle_MXM_F",
-	"srifle_EBR_F",
-	"LMG_Mk200_F",
-	"LMG_Zafir_F"
+	"arifle_Mk20C_F",
+	"arifle_SDAR_F",
+	"arifle_TRG20_F",
+	"arifle_TRG21_GL_F",
+	"arifle_TRG21_F",
+	"arifle_Mk20_F",
+	"arifle_Mk20_GL_F",
+	"arifle_Mk20C_F",
+	"arifle_SDAR_F",
+	"arifle_TRG20_F",
+	"arifle_TRG21_GL_F",
+	"arifle_TRG21_F",
+	"arifle_Mk20_F",
+	"arifle_Mk20_GL_F",
+	"arifle_Mk20C_F",
+	"arifle_SDAR_F",
+	"arifle_TRG20_F",
+	"arifle_TRG21_GL_F",
+	"arifle_TRG21_F",
+	"arifle_Mk20_F",
+	"arifle_Mk20_GL_F",
+	"arifle_Mk20C_F",
+	"arifle_SDAR_F",
+	"arifle_TRG20_F",
+	"arifle_TRG21_GL_F",
+	"arifle_TRG21_F",
+	"arifle_SDAR_F",
+	"arifle_TRG20_F",
+	"arifle_TRG21_GL_F",
+	"arifle_TRG21_F",
+    
+    // -- Assault Rifles (powerful) --
+    "arifle_MXC_F",
+    "arifle_Katiba_C_F",
+    "arifle_Katiba_F",
+    "arifle_MX_pointer_F",
+    
+    // -- MGs --
+    "arifle_MX_SW_F",
+    
+	// -- Sniper Rifles --
+	"srifle_DMR_01_F",
+	
+	// -- Rocket Launchers --
+	"launch_RPG32_F"
 ];
 
 vehicleAddition =
 [
-	"muzzle_snds_L", // 9mm
-	"muzzle_snds_M", // 5.56mm
-	"muzzle_snds_H", // 6.5mm
-	"muzzle_snds_H_MG", // 6.5mm LMG
-	"muzzle_snds_B", // 7.62mm
-	"muzzle_snds_acp", // .45 ACP
-	"optic_Arco",
-	"optic_SOS",
-	"optic_Hamr",
+    // -- Suppressors --
+	"muzzle_snds_L",
+	"muzzle_snds_acp",
+	
+	// -- Optics --
+	"optic_Holosight",
+	"optic_Holosight_smg",
+	"optic_Holosight_smg",
+    "optic_Aco",
+	"optic_ACO_grn_smg",
+	
+	// -- Others --
+	"acc_flashlight",
+	"acc_flashlight",
+	"acc_flashlight",
+	"acc_flashlight",
+	"acc_flashlight",
+	"acc_flashlight",
+	"acc_flashlight",
+	"acc_pointer_IR",
+	"acc_pointer_IR",
+	"acc_pointer_IR",
+	"Medikit",
+	"Medikit",
+	"Medikit",
+	"Medikit",
+	"Medikit",
+	"Medikit",
+	"FirstAidKit",
+	"ToolKit"
+];
+
+vehicleAdditionMilitary =
+[
+    // -- Suppressors --
+    "muzzle_snds_acp",
+	"muzzle_snds_L",
+	"muzzle_snds_acp",
+	"muzzle_snds_L",
+	"muzzle_snds_M",
+	"muzzle_snds_acp",
+	"muzzle_snds_L",
+	"muzzle_snds_M",
+	
+    // -- Optics --
 	"optic_Aco",
 	"optic_ACO_grn",
 	"optic_aco_smg",
 	"optic_Holosight",
 	"optic_Holosight_smg",
-	"acc_flashlight",
-	"acc_pointer_IR",
-	"Medikit",
-	"Medikit",
-	"FirstAidKit",
-	"ToolKit"
+	"optic_Aco",
+	"optic_ACO_grn",
+	"optic_aco_smg",
+	"optic_Holosight",
+	"optic_Holosight_smg",
+	"optic_ACO_grn_smg",
+	"optic_Aco",
+	"optic_ACO_grn",
+	"optic_aco_smg",
+	"optic_Holosight",
+	"optic_Holosight_smg",
+	"optic_ACO_grn_smg",
+	
+    // -- Scopes --
+	"optic_Hamr",
+	
+    // -- Others --
+    "FirstAidKit",
+	"ToolKit",
+    "Medikit",
+    "NVGoggles" // Very rare
 ];
 
 vehicleAddition2 =
@@ -204,5 +305,24 @@ vehicleAddition2 =
 	"Chemlight_blue",
 	"Chemlight_green",
 	"Chemlight_yellow",
-	"Chemlight_red"
+	"Chemlight_red",
+	"HandGrenade",
+	"MiniGrenade",
+	"1Rnd_HE_Grenade_shell",
+	"UGL_FlareWhite_F",
+	"UGL_FlareGreen_F",
+	"UGL_FlareRed_F",
+	"1Rnd_Smoke_Grenade_shell",
+	"1Rnd_SmokeRed_Grenade_shell",
+	"1Rnd_SmokeGreen_Grenade_shell",
+	"1Rnd_SmokePurple_Grenade_shell",
+	"UGL_FlareCIR_F",
+	"SmokeShell",
+	"SmokeShellYellow",
+	"SmokeShellOrange",
+	"SmokeShellBlue",
+	"HandGrenade",
+	"ItemGPS",
+	"ItemGPS",
+	"ItemGPS"
 ];

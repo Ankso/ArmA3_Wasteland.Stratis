@@ -18,30 +18,3 @@ private ["_pos", "_marker"];
 	_marker setMarkerBrush "SolidBorder";
 	_marker setMarkerAlpha 0.3;
 } forEach (call cityList);
-
-// Reapply territory markers on top of towns
-
-{
-	if (["TERRITORY_", _x] call fn_startsWith) then
-	{
-		_pos = markerPos _x;
-		_shape = markerShape _x;
-		_type = markerType _x;
-		_brush = markerBrush _x;
-		_color = markerColor _x;
-		_dir = markerDir _x;
-		_size = markerSize _x;
-		_alpha = markerAlpha _x;
-
-		deleteMarker _x;
-
-		_marker = createMarker [_x, _pos];
-		_marker setMarkerShape _shape;
-		_marker setMarkerType _type;
-		_marker setMarkerBrush _brush;
-		_marker setMarkerColor _color;
-		_marker setMarkerDir _dir;
-		_marker setMarkerSize _size;
-		_marker setMarkerAlpha _alpha;
-	};
-} forEach allMapMarkers;

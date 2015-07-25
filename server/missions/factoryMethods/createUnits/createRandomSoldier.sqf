@@ -19,17 +19,18 @@ private ["_soldierTypes", "_uniformTypes", "_vestTypes", "_weaponTypes", "_group
 
 _soldierTypes = ["C_man_polo_1_F", "C_man_polo_2_F", "C_man_polo_3_F", "C_man_polo_4_F", "C_man_polo_5_F", "C_man_polo_6_F"];
 _uniformTypes = ["U_B_CombatUniform_mcam_vest", "U_B_CombatUniform_mcam_tshirt" ,"U_B_CombatUniform_mcam"];
-_vestTypes = ["V_PlateCarrier1_rgr","V_PlateCarrier2_rgr"];
-_weaponTypes = ["arifle_TRG20_F","LMG_Mk200_F","arifle_MXM_F","arifle_MX_GL_F"];
+_vestTypes = ["V_BandollierB_oli","V_BandollierB_khk", "V_BandollierB_rgr", "V_Chestrig_blk", "V_HarnessO_brn"];
+_weaponTypes = ["arifle_Mk20_F","arifle_Mk20_GL_F","SMG_02_F","arifle_TRG20_F", "hgun_PDW2000_Holo_F", "SMG_01_ACO_F", "SMG_02_ARCO_pointg_F"];
 
 _group = _this select 0;
 _position = _this select 1;
 _rank = [_this, 2, "", [""]] call BIS_fnc_param;
 
-_soldier = _group createUnit [_soldierTypes call BIS_fnc_selectRandom, _position, [], 0, "NONE"];
-_soldier addUniform (_uniformTypes call BIS_fnc_selectRandom);
-_soldier addVest (_vestTypes call BIS_fnc_selectRandom);
-[_soldier, _weaponTypes call BIS_fnc_selectRandom, 3] call BIS_fnc_addWeapon;
+_soldier = _group createUnit [_soldierTypes call SGC_fnc_selectRandom, _position, [], 0, "NONE"];
+_soldier addUniform (_uniformTypes call SGC_fnc_selectRandom);
+_soldier addVest (_vestTypes call SGC_fnc_selectRandom);
+[_soldier, _weaponTypes call SGC_fnc_selectRandom, 3] call BIS_fnc_addWeapon;
+_soldier addWeapon "SmokeShell";
 
 if (_rank != "") then
 {

@@ -34,7 +34,6 @@ if (_packetName == "BIS_fnc_MP_packet") then
 		forEach
 		[
 			"client\functions\defineServerRules.sqf",
-			"territory\client\updateTerritoryMarkers.sqf",
 			"initPlayerServer.sqf"
 		];
 	}

@@ -41,7 +41,7 @@ _setupObjects =
 		_cashObjects pushBack _cash;
 	};
 
-	_vehicleClass = ["B_Boat_Armed_01_minigun_F", "O_Boat_Armed_01_hmg_F", "I_Boat_Armed_01_minigun_F"] call BIS_fnc_selectRandom;
+	_vehicleClass = ["O_Boat_Armed_01_hmg_F", "O_Boat_Armed_01_hmg_F", "O_Boat_Armed_01_hmg_F"] call SGC_fnc_selectRandom;
 
 	// Vehicle Class, Position, Fuel, Ammo, Damage, Special
 	_vehicle = [_vehicleClass, _missionPos] call createMissionVehicle2;
@@ -78,7 +78,7 @@ _successExec =
 
 	// Give the rewards
 	{
-		_x setVariable ["cmoney", 2500, true];
+		_x setVariable ["cmoney", 2000, true];
 		_x setVariable ["owner", "world", true];
 	} forEach _cashObjects;
 

@@ -13,7 +13,7 @@ private ["_markerPos", "_pos", "_boatType", "_boat"];
 
 _markerPos = _this select 0;
 
-_boatType = waterVehicles call BIS_fnc_selectRandom;
+_boatType = waterVehicles call SGC_fnc_selectRandom;
 
 //_pos = [_markerPos, 1, 15, 5, 2, 60 * (pi / 180), 0, [], [[], _markerPos]] call BIS_fnc_findSafePos;
 _pos = _markerPos;

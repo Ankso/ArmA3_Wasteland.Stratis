@@ -32,5 +32,3 @@ config_refuel_amounts = compileFinal str
 
 // How much do players spawn with?
 // config_initial_spawn_money = compileFinal "100";
-
-config_territory_markers = compileFinal preprocessFileLineNumbers "mapConfig\territories.sqf";

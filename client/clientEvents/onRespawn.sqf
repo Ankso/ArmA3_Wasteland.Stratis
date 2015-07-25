@@ -48,7 +48,7 @@ _respawnMarkers = [];
 	};
 } forEach allMapMarkers;
 
-_respawnPos = markerPos (_respawnMarkers call BIS_fnc_selectRandom);
+_respawnPos = markerPos (_respawnMarkers call SGC_fnc_selectRandom);
 
 if !(_respawnPos isEqualTo [0,0,0]) then
 {

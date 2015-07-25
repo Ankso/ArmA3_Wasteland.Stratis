@@ -9,19 +9,19 @@
 
 if (!isServer) exitWith {};
 
-private "_counter";
-_counter = 0;
+private "_markers";
+_markers = [];
 
 {
 	if (["planeSpawn_", _x] call fn_startsWith) then
 	{
-		if (random 1 < 0.25) then // 25% chance spawning
-		{
-			_noBuzzard = ["_noBuzzard", _x] call fn_findString != -1;
-			[markerPos _x, markerDir _x, _noBuzzard] call planeCreation;
-			_counter = _counter + 1;
-		};
+        _markers pushBack _x;
+		
 	};
 } forEach allMapMarkers;
 
-diag_log format["WASTELAND SERVER - %1 Planes Spawned",_counter];
+_finalSpawn = _markers call SGC_fnc_selectRandom;
+_noBuzzard = ["_noBuzzard", _finalSpawn] call fn_findString != -1;
+[markerPos _finalSpawn, markerDir _finalSpawn, _noBuzzard] call planeCreation;
+
+diag_log "WASTELAND SERVER - 1 Plane Spawned";

@@ -16,15 +16,12 @@ _setupVars =
 	_vehicleClass =
 	[
 		"B_MRAP_01_hmg_F",
-		"B_MRAP_01_gmg_F",
 		"O_MRAP_02_hmg_F",
-		"O_MRAP_02_gmg_F",
-		"I_MRAP_03_hmg_F",
-		"I_MRAP_03_gmg_F"
-	] call BIS_fnc_selectRandom;
+		"I_MRAP_03_hmg_F"
+	] call SGC_fnc_selectRandom;
 
 	_missionType = "Light Armed Vehicle";
-	_locationsArray = MissionSpawnMarkers;
+	_locationsArray = MainMissionSpawnMarkers;
 
 	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
 };

@@ -9,7 +9,7 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf"
 
-private ["_nbUnits", "_wreckPos", "_wreck", "_box1", "_box2"];
+private ["_nbUnits", "_wreckPos", "_wreck", "_box1", "_box2", "_box3"];
 
 _setupVars =
 {
@@ -33,6 +33,10 @@ _setupObjects =
 	_box2 = createVehicle ["Box_East_WpsSpecial_F", _missionPos, [], 5, "None"];
 	_box2 setDir random 360;
 	[_box2, "mission_USLaunchers"] call fn_refillbox;
+	
+	_box3 = createVehicle ["B_supplyCrate_F", _missionPos, [], 5, "None"];
+	_box3 setDir random 360;
+	[_box3, "mission_supplies"] call fn_refillbox;
 
 	{ _x setVariable ["R3F_LOG_disabled", true, true] } forEach [_box1, _box2];
 
@@ -50,13 +54,13 @@ _waitUntilCondition = nil;
 _failedExec =
 {
 	// Mission failed
-	{ deleteVehicle _x } forEach [_box1, _box2, _wreck];
+	{ deleteVehicle _x } forEach [_box1, _box2, _box3, _wreck];
 };
 
 _successExec =
 {
 	// Mission completed
-	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
+	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2, _box3];
 	deleteVehicle _wreck;
 
 	_successHintMessage = "The airwreck supplies have been collected, well done.";

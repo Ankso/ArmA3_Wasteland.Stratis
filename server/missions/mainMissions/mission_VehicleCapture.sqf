@@ -75,77 +75,16 @@ _setupObjects =
 			_vehicle setVehicleAmmo 0.5;
 		};
 
-		// M2A4 Slammer UP
-		case (_vehicle isKindOf "B_MBT_01_TUSK_F"):
-		{
-			_vehicle setVehicleAmmoDef 1;
-
-			// Reduce AP shells & MG ammo, reset HE shells and smoke mags
-			_vehicle removeMagazineTurret ["2000Rnd_65x39_Belt", [0]];
-			_vehicle removeMagazineTurret ["500Rnd_127x99_mag_Tracer_Red", [0,0]];
-			_vehicle addMagazineTurret ["20Rnd_105mm_HEAT_MP_T_Red", [0]];
-			_vehicle addMagazineTurret ["SmokeLauncherMag", [0,0]];
-			_vehicle setVehicleAmmo 0.5;
-		};
-
-		// M2A1 Slammer
-		case (_vehicle isKindOf "B_MBT_01_cannon_F"):
-		{
-			_vehicle setVehicleAmmoDef 1;
-
-			// Reduce AP shells & MG ammo, reset HE shells and smoke mags
-			_vehicle addMagazineTurret ["16Rnd_120mm_HE_shells_Tracer_Red", [0]];
-			_vehicle addMagazineTurret ["SmokeLauncherMag", [0,0]];
-			_vehicle setVehicleAmmo 0.5;
-		};
-
-		// T-100 Varsuk
-		case (_vehicle isKindOf "O_MBT_02_cannon_F"):
-		{
-			_vehicle setVehicleAmmoDef 1;
-
-			// Reduce all shells & MG ammo, reset smoke mags
-			_vehicle removeMagazineTurret ["2000Rnd_65x39_Belt_Green", [0]];
-			_vehicle removeMagazineTurret ["450Rnd_127x108_Ball", [0,0]];
-			_vehicle addMagazineTurret ["SmokeLauncherMag", [0,0]];
-			_vehicle setVehicleAmmo 0.5;
-		};
-
-		// MBT-52 Kuma
-		case (_vehicle isKindOf "I_MBT_03_cannon_F"):
-		{
-			_vehicle setVehicleAmmoDef 1;
-
-			// Reduce AP shells & MG ammo, reset HE shells and smoke mags
-			_vehicle removeMagazineTurret ["2000Rnd_65x39_Belt_Yellow", [0]];
-			_vehicle removeMagazineTurret ["500Rnd_127x99_mag_Tracer_Yellow", [0,0]];
-			_vehicle addMagazineTurret ["14Rnd_120mm_HE_shells_Tracer_Yellow", [0]];
-			_vehicle addMagazineTurret ["SmokeLauncherMag", [0,0]];
-			_vehicle setVehicleAmmo 0.5;
-		};
-
-		// PO-30 Orca
-		case (_vehicle isKindOf "Heli_Light_02_base_F"):
-		{
-			// Reset all ammo
-			_vehicle setVehicleAmmoDef 1;
-		};
-
-		// Mi-48 Kajman
-		case (_vehicle isKindOf "Heli_Attack_02_base_F"):
-		{
-			_vehicle setVehicleAmmo 0;
-
-			// Custom load
-			_vehicle addMagazine "250Rnd_30mm_HE_shells";
-			_vehicle addMagazine ["38Rnd_80mm_rockets", 20];
-			_vehicle addmagazine ["8Rnd_LG_scalpel", 2];
-		};
-
 		// All other helicopters
-		case (_vehicle isKindOf "Helicopter_Base_F"):
+		case (_vehicle isKindOf "Helicopter"):
 		{
 			// Cut all ammo by half
+			_vehicle setVehicleAmmoDef 0.5;
+		};
+		
+		// All planes
+		case (_vehicle isKindOf "Plane"):
+		{
 			_vehicle setVehicleAmmoDef 0.5;
 		};
 	};

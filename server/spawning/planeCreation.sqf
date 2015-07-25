@@ -15,7 +15,7 @@ _markerPos = _this select 0;
 _markerDir = _this select 1;
 _noBuzzard = _this select 2;
 
-_planeType = staticPlaneList call BIS_fnc_selectRandom;
+_planeType = staticPlaneList call SGC_fnc_selectRandom;
 
 if (_noBuzzard && {_planeType isKindOf "Plane_Fighter_03_base_F"}) exitWith {};
 

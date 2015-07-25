@@ -92,7 +92,7 @@ _begintime = diag_tickTime;
 							//special for weapons
 							case 1:
 							{
-								_loot = ((lootWeapon_list select _lootClass) select 1) call BIS_fnc_selectRandom;
+								_loot = ((lootWeapon_list select _lootClass) select 1) call SGC_fnc_selectRandom;
 								_lootholder addWeaponCargoGlobal [_loot, 1];
 								// always spawn 1-3 magazines to use the weapon with, otherwise nobody will take it
 								_mags = getArray (configFile >> "CfgWeapons" >> _loot >> "magazines");
@@ -106,26 +106,26 @@ _begintime = diag_tickTime;
 							{
 								_randChance = 1 + floor(random(5));
 								for "_rm" from 1 to _randChance do {
-									_loot = ((lootMagazine_list select _lootClass) select 1) call BIS_fnc_selectRandom;
+									_loot = ((lootMagazine_list select _lootClass) select 1) call SGC_fnc_selectRandom;
 									_lootholder addMagazineCargoGlobal [_loot, 1];
 								};
 							};
 							//special for item/cloth/vests
 							case 3:
 							{
-								_loot = ((lootItem_list select _lootClass) select 1) call BIS_fnc_selectRandom;
+								_loot = ((lootItem_list select _lootClass) select 1) call SGC_fnc_selectRandom;
 								_lootholder addItemCargoGlobal [_loot, 1];
 							};
 							//special for backpacks
 							case 4:
 							{
-								_loot = ((lootBackpack_list select _lootClass) select 1) call BIS_fnc_selectRandom;
+								_loot = ((lootBackpack_list select _lootClass) select 1) call SGC_fnc_selectRandom;
 								_lootholder addBackpackCargoGlobal [_loot, 1];
 							};
 							//special for world objects: account for Wasteland and other items
 							case 5:
 							{
-								_loot = ((lootworldObject_list select _lootClass) select 1) call BIS_fnc_selectRandom;
+								_loot = ((lootworldObject_list select _lootClass) select 1) call SGC_fnc_selectRandom;
 
 								if (_loot == "Land_Can_V3_F" && {["A3W_unlimitedStamina"] call isConfigOn}) exitWith {
 									_lootholder = objNull;

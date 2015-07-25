@@ -10,7 +10,7 @@ waituntil {!isnil "bis_fnc_init"};
 private ["_preload", "_randomLoc", "_pos", "_rad", "_townName", "_playerPos"];
 _preload = [_this, 1, false, [false]] call BIS_fnc_param;
 
-_randomLoc = (call cityList) call BIS_fnc_selectRandom;
+_randomLoc = (call cityList) call SGC_fnc_selectRandom;
 
 _pos = getMarkerPos (_randomLoc select 0);
 _rad = _randomLoc select 1;
