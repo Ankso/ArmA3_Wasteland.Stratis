@@ -25,7 +25,7 @@ addMissionEventHandler ["HandleDisconnect",
 }];
 
 //Execute Server Side Scripts.
-call compile preprocessFileLineNumbers "server\antihack\setup.sqf";
+// call compile preprocessFileLineNumbers "server\antihack\setup.sqf";
 [] execVM "server\admins.sqf";
 [] execVM "server\functions\serverVars.sqf";
 _serverCompileHandle = [] spawn compile preprocessFileLineNumbers "server\functions\serverCompile.sqf"; // For some reason, scriptDone stays stuck on false on Linux servers when using execVM for this line...
@@ -176,9 +176,7 @@ if (_playerSavingOn || _serverSavingOn) then
 call compile preprocessFileLineNumbers "server\missions\setupMissionArrays.sqf";
 call compile preprocessFileLineNumbers "server\functions\createTownMarkers.sqf";
 
-_createTriggers = [] spawn compile preprocessFileLineNumbers "territory\server\createCaptureTriggers.sqf"; // For some reason, scriptDone stays stuck on false on Linux servers when using execVM for this line...
-
-[_setupPlayerDB, _createTriggers] spawn
+[_setupPlayerDB] spawn
 {
 	waitUntil {sleep 0.1; {scriptDone _x} count _this == count _this};
 	A3W_serverSetupComplete = compileFinal "true";
@@ -237,16 +235,6 @@ if (["A3W_serverSpawning"] call isConfigOn) then
 };
 
 ["A3W_quit", "onPlayerDisconnected", { [_id, _uid, _name] spawn fn_onPlayerDisconnected }] call BIS_fnc_addStackedEventHandler;
-
-if (count (["config_territory_markers", []] call getPublicVar) > 0) then
-{
-	diag_log "[INFO] A3W territory capturing is ENABLED";
-	[] execVM "territory\server\monitorTerritories.sqf";
-}
-else
-{
-	diag_log "[INFO] A3W territory capturing is DISABLED";
-};
 
 // Consolidate all store NPCs in a single group
 [] spawn

@@ -25,6 +25,10 @@ _isSniper = (["_sniper_", _unit] call fn_findString != -1);
 _isDiver = (["_diver_", _unit] call fn_findString != -1);
 
 _defaultVest = "V_Rangemaster_Belt";
+_headGearBlufor = ["H_MilCap_dgtl", "H_MilCap_mcamo", "H_Watchcap_camo", "H_Watchcap_khk"];
+_headGearOpfor = ["H_Bandanna_camo", "H_Bandanna_khk", "H_Beret_ocamo"];
+_headGearIndependent = ["H_Booniehat_dgtl", "H_Booniehat_indp", "H_Shemag_olive", "H_Shemag_khk", "H_MilCap_dgtl", "H_MilCap_mcamo"];
+_vestIndependent = ["U_I_OfficerUniform"];
 
 _result = "";
 
@@ -52,7 +56,7 @@ switch (_side) do
 			};
 		};
 
-		if (_item == "headgear") then { _result = "H_MilCap_mcamo" };
+		if (_item == "headgear") then { _result = _headGearBlufor call BIS_fnc_selectRandom; };
 	};
 	case OPFOR:
 	{
@@ -71,22 +75,17 @@ switch (_side) do
 			};
 			default
 			{
-				if (_item == "uniform") then { _result = "U_O_CombatUniform_ocamo" };
+				if (_item == "uniform") then { _result = "U_O_OfficerUniform_ocamo" };
 				if (_item == "vest") then { _result = _defaultVest };
 			};
 		};
 
-		if (_item == "headgear") then { _result = "H_MilCap_ocamo" };
+		if (_item == "headgear") then { _result = _headGearOpfor call BIS_fnc_selectRandom; };
 	};
 	default
 	{
 		switch (true) do
 		{
-			case (_isSniper):
-			{
-				if (_item == "uniform") then { _result = "U_I_Ghilliesuit" };
-				if (_item == "vest") then { _result = _defaultVest };
-			};
 			case (_isDiver):
 			{
 				if (_item == "uniform") then { _result = "U_I_Wetsuit" };
@@ -95,12 +94,12 @@ switch (_side) do
 			};
 			default
 			{
-				if (_item == "uniform") then { _result = "U_I_CombatUniform" };
+				if (_item == "uniform") then { _result = _vestIndependent call BIS_fnc_selectRandom };
 				if (_item == "vest") then { _result = _defaultVest };
 			};
 		};
 
-		if (_item == "headgear") then { _result = "H_MilCap_dgtl" };
+		if (_item == "headgear") then { _result = _headGearIndependent call BIS_fnc_selectRandom; };
 	};
 };
 

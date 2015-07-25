@@ -24,40 +24,28 @@ sleep 0.1;
 // Remove GPS
 _player unlinkItem "ItemGPS";
 
-// Remove radio
-//_player unlinkItem "ItemRadio";
-
 // Remove NVG
 if (hmd _player != "") then { _player unlinkItem hmd _player };
 
-// Add NVG
-_player linkItem "NVGoggles";
-
-_player addBackpack "B_AssaultPack_rgr";
-
-_player addMagazine "9Rnd_45ACP_Mag";
-_player addWeapon "hgun_ACPC2_F";
-_player addMagazine "9Rnd_45ACP_Mag";
-_player addMagazine "9Rnd_45ACP_Mag";
-_player addMagazine "9Rnd_45ACP_Mag";
+_player addMagazine "CUP_8Rnd_9x18_Makarov_M";
+_player addWeapon "CUP_hgun_Makarov";
+_player addMagazine "CUP_8Rnd_9x18_Makarov_M";
 _player addItem "FirstAidKit";
-_player selectWeapon "hgun_ACPC2_F";
+_player selectWeapon "CUP_hgun_Makarov";
 
 switch (true) do
 {
 	case (["_medic_", typeOf _player] call fn_findString != -1):
 	{
+        _player addBackpack "B_AssaultPack_rgr";
 		_player removeItem "FirstAidKit";
 		_player addItem "Medikit";
 	};
 	case (["_engineer_", typeOf _player] call fn_findString != -1):
 	{
+        _player addBackpack "B_AssaultPack_rgr";
 		_player addItem "MineDetector";
 		_player addItem "Toolkit";
-	};
-	case (["_sniper_", typeOf _player] call fn_findString != -1):
-	{
-		_player addWeapon "Rangefinder";
 	};
 };
 

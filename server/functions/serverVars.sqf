@@ -19,11 +19,13 @@ currentStaticHelis = []; // Storage for the heli marker numbers so that we don't
 civilianVehicles =
 [
 	"C_Quadbike_01_F",
+	"C_Quadbike_01_F",
 	"C_Hatchback_01_F",
 	"C_Hatchback_01_sport_F",
 	"C_SUV_01_F",
 	"C_Offroad_01_F",
-	"I_G_Offroad_01_F",
+	"C_Offroad_01_F",
+	"C_Offroad_01_F",
 	"C_Van_01_box_F",
 	"C_Van_01_transport_F"
 ];
@@ -31,48 +33,30 @@ civilianVehicles =
 //Light Military Vehicle List - Random Spawns
 lightMilitaryVehicles =
 [
-	"B_Quadbike_01_F",
-	"O_Quadbike_01_F",
-	"I_Quadbike_01_F",
-	"I_G_Quadbike_01_F",
-//	"O_Truck_02_covered_F",
-//	"I_Truck_02_covered_F",
-//	"O_Truck_02_transport_F",
-//	"I_Truck_02_transport_F",
-	"I_G_Offroad_01_armed_F"
+	"I_MRAP_03_F",
+	"I_Truck_02_covered_F",
+	"I_Truck_02_transport_F",
+	"B_G_Offroad_01_F",
+	"B_MRAP_01_F",
+	"B_Truck_01_covered_F",
+	"B_Truck_01_transport_F"
+	
 ];
 
 //Medium Military Vehicle List - Random Spawns
 mediumMilitaryVehicles =
 [
-//	"I_Truck_02_Fuel_F",
-//	"O_Truck_02_Fuel_F",
-//	"I_Truck_02_medical_F",
-//	"O_Truck_02_medical_F",
-	"B_MRAP_01_F",
-	"O_MRAP_02_F",
-	"I_MRAP_03_F"
+    "B_G_Offroad_01_armed_F"
 ];
 
 //Water Vehicles - Random Spawns
 waterVehicles =
 [
-//	"B_Lifeboat",
-//	"O_Lifeboat",
-//	"C_Rubberboat",
-//	"B_SDV_01_F",
-//	"O_SDV_01_F",
-//	"I_SDV_01_F",
-//	"B_Boat_Transport_01_F",
-//	"O_Boat_Transport_01_F",
-//	"I_Boat_Transport_01_F",
-//	"I_G_Boat_Transport_01_F",
-	"B_Boat_Armed_01_minigun_F",
-	"O_Boat_Armed_01_hmg_F",
-	"I_Boat_Armed_01_minigun_F",
 	"C_Boat_Civil_01_F",
 	"C_Boat_Civil_01_police_F",
-	"C_Boat_Civil_01_rescue_F"
+	"C_Boat_Civil_01_rescue_F",
+	"I_Boat_Transport_01_F",
+	"O_Lifeboat"
 ];
 
 //Object List - Random Spawns.
@@ -135,7 +119,9 @@ staticHeliList =
 	"B_Heli_Light_01_F",
 	"B_Heli_Light_01_F",
 	"O_Heli_Light_02_unarmed_F",
-	"I_Heli_light_03_unarmed_F"
+	"I_Heli_light_03_unarmed_F",
+	"I_Heli_Transport_02_F",
+	"C_Heli_Light_01_civil_F"
 ];
 
 //Object List - Random Planes.
@@ -143,60 +129,183 @@ staticPlaneList =
 [
 	"B_Plane_CAS_01_F",
 	"O_Plane_CAS_02_F",
-	"I_Plane_Fighter_03_CAS_F"
+	"I_Plane_Fighter_03_CAS_F",
+	"I_Plane_Fighter_03_AA_F"
 ];
 
-//Random Weapon List - Change this to what you want to spawn in cars.
+//Random Weapon List - Change this to what you want to spawn in cars
 vehicleWeapons =
 [
-//	"hgun_P07_F",
-//	"hgun_Rook40_F",
-//	"hgun_ACPC2_F",
-//	"arifle_SDAR_F",
-	"SMG_01_F",	// Vermin .45 ACP
-	"SMG_02_F",	// Sting 9mm
+    // -- Handguns --
+ 	"hgun_P07_F",
+	"hgun_Rook40_F",
+	"hgun_ACPC2_F",
 	"hgun_PDW2000_F",
-	"arifle_TRG20_F",
-	"arifle_TRG21_F",
-	"arifle_TRG21_GL_F",
-	"arifle_Mk20C_F",
-	"arifle_Mk20_F",
-	"arifle_Mk20_GL_F",
-	"arifle_Katiba_F",
-	"arifle_Katiba_C_F",
-	"arifle_Katiba_GL_F",
-	"arifle_MXC_F",
-	"arifle_MX_F",
-	"arifle_MX_GL_F",
-	"arifle_MX_SW_F",
-	"arifle_MXM_F",
-	"srifle_EBR_F",
-	"LMG_Mk200_F",
-	"LMG_Zafir_F"
+	"CUP_hgun_Colt1911",
+	"CUP_hgun_Compact",
+	"CUP_hgun_Duty_M3X",
+	"CUP_hgun_Glock17",
+	"CUP_hgun_M9",
+	"CUP_hgun_MicroUzi",
+	"CUP_hgun_Phantom",
+	"CUP_hgun_Phantom_Flashlight_snds",
+	"CUP_hgun_TaurusTracker455",
+	"CUP_hgun_SA61",
+	
+	// -- SMGs --
+	"CUP_smg_bizon",
+	"CUP_smg_MP5A5",
+	
+	// -- Assault Rifles --
+	"CUP_arifle_AKM",
+	"CUP_arifle_AKM",
+	"CUP_arifle_AKM",
+	"CUP_arifle_AKM",
+	"CUP_arifle_AKS",
+	"CUP_arifle_AKM",
+	"CUP_arifle_AKS",
+	"CUP_arifle_AKM",
+	"CUP_arifle_AKS",
+	"CUP_arifle_AKS74U",
+	"CUP_arifle_AK74",
+	"CUP_arifle_AKS74U",
+	"CUP_arifle_AK74",
+	"CUP_srifle_LeeEnfield",
+	"CUP_srifle_LeeEnfield",
+	"CUP_arifle_M16A2",
+	"CUP_arifle_M4A1",
+	"CUP_arifle_M16A4_Base",
+	"CUP_arifle_Sa58P",
+	"CUP_arifle_Sa58V",
+	"CUP_arifle_AKS_Gold",
+	
+	// -- Sniper Rifles --
+	"CUP_srifle_SVD",
+	
+	// -- Shotguns --
+	"CUP_sgun_M1014",
+	
+	// -- Grenade launchers --
+	"CUP_glaunch_M79"
+];
+
+vehicleWeaponsMilitary =
+[
+    // -- SMGs --
+    "SMG_01_F",
+	"SMG_02_F",
+	"CUP_smg_MP5SD6",
+	"CUP_smg_EVO",
+	
+	// -- Assault Rifles --
+	"CUP_arifle_G36C",
+	"CUP_arifle_G36C_camo",
+	"CUP_arifle_CZ805_A1",
+	"CUP_arifle_XM8_Compact_Rail",
+	"CUP_arifle_XM8_Railed",
+	"CUP_arifle_L85A2",
+	"CUP_arifle_FNFAL",
+	"CUP_arifle_M4A1_camo",
+	
+	// -- Machine guns --
+	"CUP_arifle_RPK74",
+	
+	// -- Sniper Rifles --
+	"CUP_srifle_M24_des",
+	"CUP_srifle_M24_wdl",
+	"CUP_srifle_CZ550",
+	"CUP_srifle_SVD_des",
+	"CUP_srifle_M14",
+	"CUP_srifle_VSSVintorez",
+	
+	// -- Shotguns --
+	"CUP_sgun_Saiga12K",
+	
+	// -- Rocket Launchers --
+	"CUP_launch_RPG7V",
+	"CUP_launch_9K32Strela",
+	
+	// -- Special/Others --
+	"arifle_SDAR_F"
 ];
 
 vehicleAddition =
 [
-	"muzzle_snds_L", // 9mm
-	"muzzle_snds_M", // 5.56mm
-	"muzzle_snds_H", // 6.5mm
-	"muzzle_snds_H_MG", // 6.5mm LMG
-	"muzzle_snds_B", // 7.62mm
-	"muzzle_snds_acp", // .45 ACP
-	"optic_Arco",
-	"optic_SOS",
-	"optic_Hamr",
+    // -- Suppressors --
+	"muzzle_snds_L",
+	"muzzle_snds_acp",
+	"CUP_muzzle_PBS4",
+	"CUP_muzzle_PB6P9",
+	"CUP_muzzle_Bizon",
+	"CUP_muzzle_snds_M9",
+	
+	// -- Optics --
+	"optic_Holosight",
+	"CUP_optic_Eotech533",
+	"CUP_optic_Kobra",
+    "CUP_optic_CompM4",
+	"CUP_optic_PechenegScope",
+	
+	// -- Others --
+	"acc_flashlight",
+	"acc_flashlight",
+	"acc_flashlight",
+	"acc_flashlight",
+	"acc_flashlight",
+	"acc_flashlight",
+	"acc_flashlight",
+	"acc_pointer_IR",
+	"CUP_acc_ANPEQ_2",
+	"CUP_acc_ANPEQ_15",
+	"Medikit",
+	"Medikit",
+	"Medikit",
+	"Medikit",
+	"Medikit",
+	"Medikit",
+	"FirstAidKit",
+	"ToolKit"
+];
+
+vehicleAdditionMilitary =
+[
+    // -- Suppressors --
+    "CUP_muzzle_snds_G36_black",
+	"CUP_muzzle_snds_L85",
+	"CUP_muzzle_snds_M16",
+	"CUP_muzzle_snds_M16_camo",
+	"CUP_muzzle_snds_XM8",
+	"CUP_muzzle_snds_M14",
+	
+    // -- Optics --
 	"optic_Aco",
 	"optic_ACO_grn",
 	"optic_aco_smg",
 	"optic_Holosight",
 	"optic_Holosight_smg",
-	"acc_flashlight",
-	"acc_pointer_IR",
-	"Medikit",
-	"Medikit",
-	"FirstAidKit",
-	"ToolKit"
+	"optic_Aco",
+	"optic_ACO_grn",
+	"optic_aco_smg",
+	"optic_Holosight",
+	"optic_Holosight_smg",
+	"CUP_optic_HoloBlack",
+	"CUP_optic_Eotech533",
+	"CUP_optic_CompM4",
+	"CUP_optic_CompM2_Black",
+	"CUP_optic_TrijiconRx01_black",
+	"CUP_optic_CompM2_Woodland2",
+	"CUP_optic_CompM2_Desert",
+	
+    // -- Scopes --
+	"CUP_optic_PSO_1",
+	"CUP_optic_PSO_1",
+	"CUP_optic_ACOG",
+	
+    // -- Others --
+    "FirstAidKit",
+	"ToolKit",
+    "Medikit",
+    "NVGoggles" // Very rare
 ];
 
 vehicleAddition2 =
@@ -204,5 +313,20 @@ vehicleAddition2 =
 	"Chemlight_blue",
 	"Chemlight_green",
 	"Chemlight_yellow",
-	"Chemlight_red"
+	"Chemlight_red",
+	"HandGrenade",
+	"MiniGrenade",
+	"CUP_1Rnd_HE_M203",
+	"CUP_1Rnd_HEDP_M203",
+	"CUP_FlareWhite_M203",
+	"CUP_FlareRed_M203",
+	"CUP_1Rnd_Smoke_M203",
+	"CUP_1Rnd_SmokeRed_M203",
+	"CUP_1Rnd_SmokeGreen_M203",
+	"CUP_1Rnd_SmokeYellow_M203",
+	"SmokeShell",
+	"SmokeShellYellow",
+	"SmokeShellOrange",
+	"SmokeShellBlue",
+	"HandGrenade"
 ];
