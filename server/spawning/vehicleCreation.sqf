@@ -29,24 +29,12 @@ else
 {
 	_num = random 100;
 
-    if (_num < 2) then
-    {
-        _vehicleType = mediumMilitaryVehicles call BIS_fnc_selectRandom;
-        _type = 2;
-    }
-    else
-    {
-        if (_num < 10) then
-        {
-            _vehicleType = lightMilitaryVehicles call BIS_fnc_selectRandom;
-            _type = 1;
-        }
-        else
-        {
-            _vehicleType = civilianVehicles call BIS_fnc_selectRandom;
-            _type = 0;
-        };
-    };
+	switch (true) do
+	{
+		case (_num < 15): { _vehicleType = mediumMilitaryVehicles call BIS_fnc_selectRandom; _type = 2 };
+		case (_num < 50): { _vehicleType = lightMilitaryVehicles call BIS_fnc_selectRandom; _type = 1 };
+		default           { _vehicleType = civilianVehicles call BIS_fnc_selectRandom; _type = 0 };
+	};
 };
 
 //_pos = [_markerPos, 2, 25, ( if (_type == 1) then { 2 } else { 5 } ), 0, 60 * (pi / 180), 0, [], [_markerPos]] call BIS_fnc_findSafePos;
@@ -87,4 +75,4 @@ if (_vehicleType isKindOf "Offroad_01_armed_base_F") then
 if (_type > 1) then { _vehicle setVehicleAmmo (random 1.0) };
 
 _vehicle setDir (random 360);
-[_vehicle, _type] call randomWeapons;
+[_vehicle] call randomWeapons;

@@ -9,45 +9,31 @@
 
 if (!isServer) exitWith {};
 
-private ["_car", "_vehicleType", "_additionArray", "_nightTime", "_weapon", "_mag", "_additionOne", "_additionTwo", "_additionThree", "_buildingLootOn", "_random"];
+private ["_car", "_additionArray", "_nightTime", "_weapon", "_mag", "_additionOne", "_additionTwo", "_additionThree", "_buildingLootOn", "_random"];
 
 //Grabs car object from array in execVM
 _car = _this select 0;
-_vehicleType = _this select 1;
-// Different weapons and accessories if the vehicle is a military one
-if (_vehicleType >= 1) then
-{
-    _additionArray = vehicleAdditionMilitary;
-}
-else
-{
-    _additionArray = vehicleAddition;
-};
-
+_additionArray = vehicleAddition;
 _nightTime = (date select 3 >= 18 || date select 3 < 5); // spawn night items between 18:00 and 05:00 (sunlight is completely gone by 20:00)
 
 // If night is falling, add flashlight, IR pointers, and NV goggles to loot possibilities
 if (_nightTime) then
 {
-	if (random 1 < 0.05) then { _car addItemCargoGlobal ["NVGoggles", 1]};
+	{ _additionArray pushBack _x} forEach ["acc_flashlight", "acc_pointer_IR"];
+	if (random 1 < 0.15) then { _car addItemCargoGlobal ["NVGoggles", 1]};
 };
 
-if (random 1 < 0.33) then { _car addWeaponCargoGlobal ["Binocular", 1]};
+if (random 1 < 0.45) then { _car addWeaponCargoGlobal ["Binocular", 1]};
 
-//Get Random Gun From randomWeapons Array. Same as above, different type of loot in function of the vehicle.
-if (_vehicleType >= 1) then
-{
-    _weapon = vehicleWeaponsMilitary call BIS_fnc_selectRandom;
-}
-else
-{
-    _weapon = vehicleWeapons call BIS_fnc_selectRandom;
-};
+//Get Random Gun From randomWeapons Array.
+_weapon = vehicleWeapons call BIS_fnc_selectRandom;
 _mag = ((getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines")) select 0) call getBallMagazine;
 
 _additionOne = _additionArray call BIS_fnc_selectRandom;
 _additionArray = _additionArray - [_additionOne];
-_additionTwo = vehicleAddition2 call BIS_fnc_selectRandom;
+_additionTwo = _additionArray call BIS_fnc_selectRandom;
+//_additionArray = _additionArray - [_additionTwo];
+_additionThree = vehicleAddition2 call BIS_fnc_selectRandom;
 
 _buildingLootOn = (["A3W_buildingLootWeapons"] call isConfigOn && (isNil "A3W_buildingLoot" || {["A3W_buildingLoot"] call isConfigOn}));
 
@@ -64,11 +50,12 @@ switch (["A3W_vehicleLoot", 1] call getPublicVar) do
 		if (_random < 0.5 || !_buildingLootOn) then
 		{
 			_car addWeaponCargoGlobal [_weapon, 1];
-			_car addMagazineCargoGlobal [_mag, 1 + floor random 3];
+			_car addMagazineCargoGlobal [_mag, 2 + floor random 3];
 		};
 		if (_random >= 0.5 || !_buildingLootOn) then
 		{
-			_car addMagazineCargoGlobal [_additionTwo, 1];
+			_car addItemCargoGlobal [_additionTwo, 1];
+			if (_nightTime) then { _car addMagazineCargoGlobal [_additionThree, 1] };
 		};
 
 		_car addItemCargoGlobal [_additionOne, 1];
@@ -76,25 +63,27 @@ switch (["A3W_vehicleLoot", 1] call getPublicVar) do
 	case 2:
 	{
 		_car addWeaponCargoGlobal [_weapon, 1];
-		_car addMagazineCargoGlobal [_mag, 1 + floor random 3];
+		_car addMagazineCargoGlobal [_mag, 2 + floor random 3];
 
 		_car addItemCargoGlobal ["FirstAidKit", 1];
 		_car addItemCargoGlobal [_additionOne, 1];
-		_car addMagazineCargoGlobal [_additionTwo, 1];
+		_car addItemCargoGlobal [_additionTwo, 1];
+		if (_nightTime) then { _car addMagazineCargoGlobal [_additionThree, 1] };
 	};
 	case 3:
 	{
 		_car addWeaponCargoGlobal [_weapon, 1];
-		_car addMagazineCargoGlobal [_mag, 1 + floor random 3];
+		_car addMagazineCargoGlobal [_mag, 2 + floor random 3];
 
 		// 2nd weapon
 		_weapon = vehicleWeapons call BIS_fnc_selectRandom;
 		_mag = ((getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines")) select 0) call getBallMagazine;
 		_car addWeaponCargoGlobal [_weapon, 1];
-		_car addMagazineCargoGlobal [_mag, 1 + floor random 3];
+		_car addMagazineCargoGlobal [_mag, 2 + floor random 3];
 
-		_car addItemCargoGlobal ["FirstAidKit", 1];
-		_car addItemCargoGlobal [_additionOne, 1];
-		_car addItemCargoGlobal [_additionTwo, 1];
+		_car addItemCargoGlobal ["FirstAidKit", 2];
+		_car addItemCargoGlobal [_additionOne, 2];
+		_car addItemCargoGlobal [_additionTwo, 2];
+		if (_nightTime) then { _car addMagazineCargoGlobal [_additionThree, 1] };
 	};
 };

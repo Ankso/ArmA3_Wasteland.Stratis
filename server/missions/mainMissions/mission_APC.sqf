@@ -17,7 +17,12 @@ _setupVars =
 	[
 		"B_APC_Wheeled_01_cannon_F",
 		"O_APC_Wheeled_02_rcws_F",
-		"I_APC_Wheeled_03_cannon_F"
+		"I_APC_Wheeled_03_cannon_F",
+		"B_APC_Tracked_01_rcws_F",
+		"O_APC_Tracked_02_cannon_F",
+		"I_APC_tracked_03_cannon_F",
+		"B_APC_Tracked_01_AA_F",
+		"O_APC_Tracked_02_AA_F"
 	] call BIS_fnc_selectRandom;
 
 	_missionType = switch (true) do

@@ -5,12 +5,10 @@
 //	@file Author: [404] Deadbeat, [404] Costlyy, [GoT] JoSchaap, MercyfulFate, AgentRev
 //	@file Args:
 
-diag_log "######### First #########";
 mf_notify_client = "client\functions\notifyClient.sqf" call mf_compile;
 mf_util_playUntil = "client\functions\playUntil.sqf" call mf_compile;
 
 // Event handlers
-diag_log "######### Event handlers #########";
 getInVehicle = "client\clientEvents\getInVehicle.sqf" call mf_compile;
 getOutVehicle = "client\clientEvents\getOutVehicle.sqf" call mf_compile;
 onRespawn = "client\clientEvents\onRespawn.sqf" call mf_compile;
@@ -19,7 +17,6 @@ onKeyPress = "client\clientEvents\onKeyPress.sqf" call mf_compile;
 onKeyRelease = "client\clientEvents\onKeyRelease.sqf" call mf_compile;
 
 // Functions
-diag_log "######### Functions #########";
 A3W_fnc_copilotTakeControl = "client\functions\copilotTakeControl.sqf" call mf_compile;
 A3W_fnc_titleTextMessage = "client\functions\titleTextMessage.sqf" call mf_compile;
 addWeaponInventory = "client\functions\addWeaponInventory.sqf" call mf_compile;
@@ -49,10 +46,10 @@ playerEventServer = "client\functions\playerEventServer.sqf" call mf_compile;
 serverMessage = "client\functions\serverMessage.sqf" call mf_compile;
 uniformConverter = "client\functions\uniformConverter.sqf" call mf_compile;
 unitHandleDamage = "client\functions\unitHandleDamage.sqf" call mf_compile;
+updateTerritoryMarkers = "territory\client\updateTerritoryMarkers.sqf" call mf_compile;
 vehicleSideCfg = "client\functions\vehicleSideCfg.sqf" call mf_compile;
 
 // Player details and actions
-diag_log "######### Player details and actions #########";
 loadPlayerMenu = "client\systems\playerMenu\init.sqf" call mf_compile;
 playerSpawn = "client\functions\playerSpawn.sqf" call mf_compile;
 playerSetup = "client\functions\playerSetup.sqf" call mf_compile;
@@ -68,7 +65,6 @@ spawnRandom = "client\functions\spawnRandom.sqf" call mf_compile;
 // repairVehicle = "client\systems\playerMenu\repair.sqf" call mf_compile;
 
 // Sync client with server time
-diag_log "######### Others #########";
 timeSync = "client\functions\clientTimeSync.sqf" call mf_compile;
 
 // Update scripts
@@ -79,7 +75,6 @@ teamkillAction = "client\functions\doTeamKillAction.sqf" call mf_compile;
 teamkillMessage = "client\functions\showTeamKillMessage.sqf" call mf_compile;
 
 // Dialog compiles
-diag_log "######### Dialog compiles #########";
 client_respawnDialog = "client\systems\playerMenu\dialog\loadRespawnDialog.sqf" call mf_compile;
 fn_respawnTimer = "client\systems\scoreboard\fn_respawnTimer.sqf" call mf_compile;
 loadGeneralStore = "client\systems\generalStore\loadGenStore.sqf" call mf_compile;
@@ -91,10 +86,9 @@ getItemInfo = "client\functions\getItemInfo.sqf" call mf_compile;
 getSellPriceList = "client\systems\selling\getSellPriceList.sqf" call mf_compile;
 requestStoreObject = "client\functions\requestStoreObject.sqf" call mf_compile;
 
-diag_log "######### Final #########";
 if (isNil "A3W_fnc_MP") then { A3W_fnc_MP = compile preprocessFileLineNumbers "\A3\functions_f\MP\fn_MP.sqf" };
 if (isNil "A3W_fnc_MPexec") then { A3W_fnc_MPexec = compile preprocessFileLineNumbers "\A3\functions_f\MP\fn_MPexec.sqf" };
-diag_log "######### Done #########";
+
 player groupChat "Wasteland - Client Compile Complete";
 sleep 1;
 playerCompiledScripts = true;
