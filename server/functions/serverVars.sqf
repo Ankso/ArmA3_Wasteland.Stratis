@@ -304,7 +304,8 @@ vehicleAdditionMilitary =
     "FirstAidKit",
 	"ToolKit",
     "Medikit",
-    "NVGoggles" // Very rare
+    "NVGoggles", // Very rare
+    "ItemGPS"
 ];
 
 vehicleAddition2 =
@@ -328,8 +329,5 @@ vehicleAddition2 =
 	"SmokeShellYellow",
 	"SmokeShellOrange",
 	"SmokeShellBlue",
-	"HandGrenade",
-	"ItemGPS",
-	"ItemGPS",
-	"ItemGPS"
+	"HandGrenade"
 ];

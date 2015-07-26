@@ -64,7 +64,7 @@ if (isServer) then
 
 	[] execVM "server\functions\broadcaster.sqf";
 	[] execVM "server\functions\relations.sqf";
-	[] execVM (externalConfigFolder + "\init.sqf");
+	[] execVM externalConfigFolder + "\admin.sqf";
 
 	waitUntil {scriptDone _serverCompileHandle};
 
