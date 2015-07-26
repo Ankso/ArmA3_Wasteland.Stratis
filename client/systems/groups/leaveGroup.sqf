@@ -8,3 +8,5 @@
 
 _group = group player;
 [player] join grpNull;
+player setVariable ["currentGroupRestore", grpNull, true];
+player setVariable ["currentGroupIsLeader", false, true];

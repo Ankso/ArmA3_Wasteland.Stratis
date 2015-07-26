@@ -8,9 +8,10 @@
 
 _player = _this select 0;
 _presumedKiller = effectiveCommander (_this select 1);
-_killer = _player getVariable ["FAR_killerPrimeSuspect", objNull];
+_killer = _player getVariable "FAR_killerPrimeSuspect";
 
-if (isNull _killer) then { _killer = _presumedKiller };
+if (isNil "_killer" && !isNil "FAR_findKiller") then { _killer = _player call FAR_findKiller };
+if (isNil "_killer" || {isNull _killer}) then { _killer = _presumedKiller };
 if (_killer == _player) then { _killer = objNull };
 
 [_player, _killer, _presumedKiller] spawn
@@ -40,7 +41,13 @@ if (_player == player) then
 		["A3W_scoreboard", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 	}] call BIS_fnc_addStackedEventHandler;
 
-	playerData_gear = ""; // Reset gear data
+	if (!isNil "savePlayerHandle" && {typeName savePlayerHandle == "SCRIPT" && {!scriptDone savePlayerHandle}}) then
+	{
+		terminate savePlayerHandle;
+	};
+
+	playerData_infoPairs = nil;
+	playerData_savePairs = nil;
 	//combatTimestamp = -1; // Reset abort timer
 };
 
@@ -66,37 +73,8 @@ _player spawn
 		[_id, _qty] call mf_inventory_remove;
 	} forEach call mf_inventory_all;
 
-	// wait until corpse stops moving before dropping stuff
-	waitUntil {(getPos _player) select 2 < 1 && vectorMagnitude velocity _player < 1};
-
-	// Drop money
-	if (_money > 0) then
-	{
-		_m = createVehicle ["Land_Money_F", getPosATL _player, [], 0.5, "CAN_COLLIDE"];
-		_m setDir random 360;
-		_m setVariable ["cmoney", _money, true];
-		_m setVariable ["owner", "world", true];
-	};
-
-	// Drop items
-	_itemsDroppedOnDeath = [];
-
-	{
-		_id = _x select 0;
-		_qty = _x select 1;
-		_type = _x select 2;
-
-		for "_i" from 1 to _qty do
-		{
-			_obj = createVehicle [_type, getPosATL _player, [], 0.5, "CAN_COLLIDE"];
-			_obj setDir random 360;
-			_obj setVariable ["mf_item_id", _id, true];
-			_itemsDroppedOnDeath pushBack netId _obj;
-		};
-	} forEach _items;
-
-	itemsDroppedOnDeath = _itemsDroppedOnDeath;
-	publicVariableServer "itemsDroppedOnDeath";
+	pvar_dropPlayerItems = [_player, _money, _items];
+	publicVariableServer "pvar_dropPlayerItems";
 };
 
 _player spawn fn_removeAllManagedActions;

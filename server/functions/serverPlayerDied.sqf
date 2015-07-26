@@ -8,7 +8,7 @@
 
 if (!isServer) exitWith {};
 
-private ["_unit", "_killer", "_presumedKiller", "_backpack"];
+private ["_unit", "_killer", "_presumedKiller", "_scoreColumn", "_scoreValue", "_backpack"];
 
 _unit = _this select 0;
 _unit setVariable ["processedDeath", diag_tickTime];
@@ -27,12 +27,21 @@ if !(_killer isKindOf "Man") then { _killer = effectiveCommander _killer };
 // Score handling
 if (isPlayer _killer) then
 {
-	_playerSide = side group _unit;
+	_victimSide = side group _unit;
 	_killerSide = side group _killer;
-	_indyIndyKill = (_playerSide == _killerSide) && !(_playerSide in [BLUFOR,OPFOR]) && (group _unit != group _killer);
+	_indyIndyKill = ((_victimSide == _killerSide) && !(_victimSide in [BLUFOR,OPFOR]) && (group _unit != group _killer));
+	_enemyKill = (_killerSide getFriend _victimSide < 0.6 || _indyIndyKill);
 
-	_scoreColumn = if (isPlayer _unit) then { "playerKills" } else { "aiKills" };
-	_scoreValue = if (_killerSide getFriend _playerSide < 0.6 || _indyIndyKill || (!isPlayer _unit && _playerSide == CIVILIAN)) then { 1 } else { -1 };
+	if (isPlayer _unit) then
+	{
+		_scoreColumn = if (_enemyKill) then { "playerKills" } else { "teamKills" };
+		_scoreValue = 1;
+	}
+	else
+	{
+		_scoreColumn = "aiKills";
+		_scoreValue = if (_enemyKill || _victimSide == CIVILIAN) then { 1 } else { 0 };
+	};
 
 	[_killer, _scoreColumn, _scoreValue] call fn_addScore;
 
@@ -57,21 +66,14 @@ if (!isNull _backpack) then
 // Eject corpse from vehicle once stopped
 if (vehicle _unit != _unit) then
 {
-	_unit spawn
+	if (local _unit) then
 	{
-		private "_veh";
-
-		waitUntil
-		{
-			sleep 0.5;
-			_veh = vehicle _this;
-			isNull _this || ((isTouchingGround _veh || (getPos _veh) select 2 < 5) && {vectorMagnitude velocity _veh < 5})
-		};
-
-		if (_veh != _this) then
-		{
-			_this setPos ((getPosATL _this) vectorAdd ([[1 + random 1.5, 0, 0], -([_this, _veh] call BIS_fnc_dirTo)] call BIS_fnc_rotateVector2D)); // ejects dead bodies
-		};
+		_unit spawn fn_ejectCorpse;
+	}
+	else
+	{
+		pvar_ejectCorpse = _unit;
+		(owner _unit) publicVariableClient "pvar_ejectCorpse";
 	};
 };
 

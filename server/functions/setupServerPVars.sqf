@@ -19,24 +19,29 @@ publicVariable "currentDate";
 currentInvites = [];
 publicVariable "currentInvites";
 
-"itemsDroppedOnDeath" addPublicVariableEventHandler
-{
-	{
-		if (!isNil "_x") then
-		{
-			(objectFromNetId _x) setVariable ["processedDeath", diag_tickTime];
-		};
-	} forEach (_this select 1);
-};
+#define PVAL (_this select 1)
 
-"PlayerCDeath" addPublicVariableEventHandler { (_this select 1) call server_playerDied };
-"pvar_removeNegativeScore" addPublicVariableEventHandler { (_this select 1) call removeNegativeScore };
-"pvar_enableSimulationGlobal" addPublicVariableEventHandler { (_this select 1) call fn_enableSimulationGlobal };
-"pvar_parachuteLiftedVehicle" addPublicVariableEventHandler { (_this select 1) spawn parachuteLiftedVehicle };
-"pvar_spawnStoreObject" addPublicVariableEventHandler { (_this select 1) call spawnStoreObject };
-"pvar_processGroupInvite" addPublicVariableEventHandler { (_this select 1) call processGroupInvite };
-"pvar_processMoneyPickup" addPublicVariableEventHandler { (_this select 1) call processMoneyPickup };
-"pvar_punishTeamKiller" addPublicVariableEventHandler { (_this select 1) call punishTeamKiller };
-"pvar_teamSwitchLock" addPublicVariableEventHandler { (_this select 1) call teamSwitchLock };
-"pvar_teamSwitchUnlock" addPublicVariableEventHandler { (_this select 1) call teamSwitchUnlock };
-"pvar_teamKillUnlock" addPublicVariableEventHandler { (_this select 1) call teamKillUnlock };
+{ (_x select 0) addPublicVariableEventHandler (_x select 1) } forEach
+[
+	["PlayerCDeath", { PVAL call server_playerDied }],
+	["pvar_removeNegativeScore", { PVAL call removeNegativeScore }],
+	["pvar_convertTerritoryOwner", { PVAL call convertTerritoryOwner }],
+	["pvar_enableSimulationGlobal", { PVAL call fn_enableSimulationGlobal }],
+	["pvar_enableSimulationServer", { PVAL call fn_enableSimulationServer }],
+	["pvar_parachuteLiftedVehicle", { PVAL spawn parachuteLiftedVehicle }],
+	["pvar_spawnStoreObject", { PVAL call spawnStoreObject }],
+	["pvar_processGroupInvite", { PVAL call processGroupInvite }],
+	["pvar_processMoneyPickup", { PVAL call processMoneyPickup }],
+	["pvar_processTransaction", { PVAL call processTransaction }],
+	["pvar_punishTeamKiller", { PVAL call punishTeamKiller }],
+	["pvar_teamSwitchLock", { PVAL call teamSwitchLock }],
+	["pvar_teamSwitchUnlock", { PVAL call teamSwitchUnlock }],
+	["pvar_teamKillUnlock", { PVAL call teamKillUnlock }],
+	["pvar_updatePlayerScore", { PVAL call fn_updatePlayerScore }],
+	["pvar_manualObjectSave", { if (!isNil "fn_manualObjectSave") then { PVAL call fn_manualObjectSave } }],
+	["pvar_manualObjectDelete", { if (!isNil "fn_manualObjectDelete") then { PVAL call fn_manualObjectDelete } }],
+	["pvar_manualVehicleSave", { if (!isNil "fn_manualVehicleSave") then { PVAL call fn_manualVehicleSave } }],
+	["pvar_playerRespawn", { PVAL spawn playerRespawnServer }],
+	["pvar_waitUntilBagTaken", { PVAL spawn waitUntilBagTaken }],
+	["pvar_dropPlayerItems", { PVAL spawn dropPlayerItems }]
+];

@@ -42,14 +42,16 @@ if (_success) then {
 	_beacon setVariable ["ownerUID", _uid, true];
 	_beacon setVariable ["packing", false, true];
 	_beacon setVariable ["groupOnly", (playerSide == INDEPENDENT), true];
-	{
+	/*{
 		if (_x getVariable ["ownerUID",""] == _uid) then {
 			pvar_spawn_beacons = pvar_spawn_beacons - [_x];
 		};
-	} forEach pvar_spawn_beacons;
+	} forEach pvar_spawn_beacons;*/
 
 	pvar_spawn_beacons pushBack _beacon;
 	publicVariable "pvar_spawn_beacons";
+	pvar_manualObjectSave = netId _beacon;
+	publicVariableServer "pvar_manualObjectSave";
 	["You placed the Spawn Beacon successfully!", 5] call mf_notify_client;
 };
 _success;

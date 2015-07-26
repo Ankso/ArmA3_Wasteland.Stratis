@@ -10,7 +10,22 @@ if (!isServer) exitWith {};
 
 if (isNil "A3W_network_compileFuncs") then
 {
-	private ["_packetKey", "_assignPacketKey", "_packetKeyArray", "_checksum", "_assignChecksum", "_checksumArray"];
+	private ["_compileKey", "_assignCompileKey", "_packetKey", "_assignPacketKey", "_packetKeyArray", "_checksum", "_assignChecksum", "_checksumArray", "_rscList", "_rscParams", "_rscCfg", "_payload", "_externPayload"];
+
+	_compileKey = call A3W_fnc_generateKey;
+
+	_assignCompileKey = "";
+	for "_x" from 0 to (floor random 50) do { _assignCompileKey = _assignCompileKey + " " };
+	_assignCompileKey = _assignCompileKey + 'private "_compileKey";';
+	for "_x" from 0 to (floor random 50) do { _assignCompileKey = _assignCompileKey + " " };
+	for "_x" from 0 to (floor random 5) do { _assignCompileKey = _assignCompileKey + str floor random 10 + '=" private ""_compileKey""; call compile toString [' + str floor random 100 + '];";' };
+	_assignCompileKey = _assignCompileKey + "call compile toString ";
+	_compileKeyArray = "_compileKey = ";
+	{
+		if (_forEachIndex > 0) then { _compileKeyArray = _compileKeyArray + "+" };
+		_compileKeyArray = _compileKeyArray + format ['"%1"', toString [_x]];
+	} forEach toArray _compileKey;
+	_assignCompileKey = _assignCompileKey + (str toArray _compileKeyArray) + "; ";
 
 	_packetKey = call A3W_fnc_generateKey;
 
@@ -42,8 +57,41 @@ if (isNil "A3W_network_compileFuncs") then
 	} forEach toArray _checksum;
 	_assignChecksum = _assignChecksum + (str toArray _checksumArray) + "; ";
 
-	[_assignChecksum, _assignPacketKey] call compile preprocessFileLineNumbers "server\antihack\createUnit.sqf";
-	waitUntil {!isNil {missionNamespace getVariable _checksum}};
+	_rscList = ["RscDisplayAVTerminal", "RscDisplayCommonHint", "RscDisplayCommonMessage", "RscDisplayCommonMessagePause", "RscDisplayConfigureAction", "RscDisplayConfigureControllers", "RscDisplayControlSchemes", "RscDisplayCustomizeController", "RscDisplayDebriefing", "RscDisplayDiary", "RscDisplayFieldManual", "RscDisplayGameOptions", "RscDisplayGetReady", "RscDisplayInsertMarker", "RscDisplayInterrupt", "RscDisplayInventory", "RscDisplayJoystickSchemes", "RscDisplayLoading", "RscDisplayLoadMission", "RscDisplayMainMap", "RscDisplayMicSensitivityOptions", "RscDisplayOptions", "RscDisplayOptionsAudio", "RscDisplayOptionsLayout", "RscDisplayOptionsVideo", "RscDisplayStart", "RscDisplayVehicleMsgBox", "RscDisplayVoiceChat"];
+	_rscParams = [];
+
+	{
+		_rscCfg = configFile >> _x;
+
+		if (isClass _rscCfg) then
+		{
+			_rscParams pushBack [_x, toArray getText (_rscCfg >> "onLoad"), toArray getText (_rscCfg >> "onUnload")];
+		};
+	} forEach _rscList;
+
+	_payload = 0;
+
+	if (!hasInterface) then
+	{
+		_externPayload = preprocessFile (externalConfigFolder + "\antihack\payload.sqf");
+
+		if (_externPayload == "") then
+		{
+			diag_log "ANTI-HACK: External payload unavailable, using internal payload";
+		}
+		else
+		{
+			diag_log "ANTI-HACK: Using external payload";
+			_payload = compile _externPayload;
+		};
+	}
+	else
+	{
+		diag_log "ANTI-HACK: In-game hosting, using internal payload"; // to avoid script not found messagebox
+	};
+
+	[_assignCompileKey, _assignChecksum, _assignPacketKey, str _rscParams, _payload] call compile preprocessFileLineNumbers "server\antihack\createUnit.sqf";
+	waitUntil {!isNil {missionNamespace getVariable _compileKey}};
 
 	diag_log "ANTI-HACK: Started.";
 };

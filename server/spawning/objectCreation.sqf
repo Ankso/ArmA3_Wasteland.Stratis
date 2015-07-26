@@ -6,8 +6,9 @@
 
 if (!isServer) exitWith {};
 
-private ["_objPos", "_objClass", "_obj", "_adjustZ", "_pos"];
+private ["_objPos", "_objList", "_objClass", "_obj", "_adjustZ", "_pos"];
 _objPos = _this select 0;
+_objList = _this select 1;
 
 _objClass = objectList call SGC_fnc_selectRandom;
 _obj = createVehicle [_objClass, _objPos, [], 50, "None"];
@@ -59,3 +60,5 @@ _adjustZ = switch (true) do
 _pos = getPosATL _obj;
 _pos set [2, (_pos select 2) + _adjustZ];
 _obj setPos _pos;
+
+[_obj] call basePartSetup;
