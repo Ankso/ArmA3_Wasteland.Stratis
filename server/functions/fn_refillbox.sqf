@@ -143,7 +143,7 @@ switch (_boxType) do
                 ["itm", "Medikit", RANDOM_BETWEEN(1,3)],
                 ["itm", "Toolkit", RANDOM_BETWEEN(0,1)],
                 ["itm", ["rhs_acc_pso1m2", "optic_Aco", "optic_Holosight", "rhs_acc_1p78", "optic_ACO_grn"], RANDOM_BETWEEN(0,2)],
-                ["itm", ["itm", ["muzzle_snds_M", "muzzle_snds_L", "rhs_acc_dtk3", "rhs_acc_ak5", "rhs_acc_tgpa"], RANDOM_BETWEEN(0,3)],
+                ["itm", ["muzzle_snds_M", "muzzle_snds_L", "rhs_acc_dtk3", "rhs_acc_ak5", "rhs_acc_tgpa"], RANDOM_BETWEEN(0,3)],
                 // Handguns/SMGs
                 ["wep", ["hgun_PDW2000_Holo_snds_F", "SMG_02_ARCO_pointg_F", "SMG_01_Holo_pointer_snds_F"], RANDOM_BETWEEN(1,3), RANDOM_BETWEEN(3,5)],
                 // Assault rifles

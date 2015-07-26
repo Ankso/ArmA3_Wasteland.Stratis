@@ -12,6 +12,7 @@
 // Towns and cities array
 // Marker Name, Diameter, City Name
 cityList = compileFinal preprocessFileLineNumbers "mapConfig\towns.sqf";
+cityListPvP = compileFinal preprocessFileLineNumbers "mapConfig\townsPvP.sqf";
 
 config_items_jerrycans_max = compileFinal "1";
 config_items_syphon_hose_max = compileFinal "1";

@@ -1851,7 +1851,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=123;
+		items=124;
 		class Item0
 		{
 			position[]={1823.1123,145.87,11943.202};
@@ -2672,7 +2672,7 @@ class Mission
 		};
 		class Item108
 		{
-			position[]={-235.26344,258.57321,2963.0012};
+			position[]={-242.92159,247.04893,2821.3242};
 			name="Mission";
 			type="Empty";
 			colorName="ColorOrange";
@@ -2714,66 +2714,63 @@ class Mission
 		};
 		class Item114
 		{
-			position[]={6260.3354,59.763035,11191.116};
-			name="Town_no_spawn_1";
+			position[]={-244.65189,267.24762,3079.5159};
+			name="TownPvP";
 			type="Empty";
-			colorName="ColorKhaki";
 		};
 		class Item115
 		{
-			position[]={5233.9053,144.23149,6156.3491};
-			name="Town_no_spawn_2";
+			position[]={6277.5723,59.777119,11214.146};
+			name="TownPvP_1";
 			type="Empty";
-			colorName="ColorKhaki";
 		};
 		class Item116
 		{
-			position[]={5943.8267,122.73345,7278.7329};
-			name="Town_no_spawn_3";
+			position[]={5996.5444,67.268906,10480.848};
+			name="TownPvP_2";
 			type="Empty";
-			colorName="ColorKhaki";
 		};
 		class Item117
 		{
-			position[]={5806.1665,273.4978,5700.022};
-			name="Town_no_spawn_4";
+			position[]={5670.2842,74.335709,9962.251};
+			name="TownPvP_3";
 			type="Empty";
-			colorName="ColorKhaki";
 		};
 		class Item118
 		{
-			position[]={10814.76,280.07565,6304.7344};
-			name="Town_no_spawn_5";
+			position[]={5936.125,122.67146,7286.7632};
+			name="TownPvP_4";
 			type="Empty";
-			colorName="ColorKhaki";
 		};
 		class Item119
 		{
-			position[]={8447.5762,306.13232,2446.9128};
-			name="Town_no_spawn_6";
+			position[]={5287.9287,145.3053,6153.0728};
+			name="TownPvP_5";
 			type="Empty";
-			colorName="ColorKhaki";
 		};
 		class Item120
 		{
-			position[]={10132.312,346.22733,2332.0271};
-			name="Town_no_spawn_7";
+			position[]={5844.7251,267.69681,5691.9385};
+			name="TownPvP_6";
 			type="Empty";
-			colorName="ColorKhaki";
 		};
 		class Item121
 		{
-			position[]={5957.8921,67.143791,10493.248};
-			name="Town_no_spawn_8";
+			position[]={10815.204,280.84625,6330.5874};
+			name="TownPvP_7";
 			type="Empty";
-			colorName="ColorKhaki";
 		};
 		class Item122
 		{
-			position[]={5633.0439,74.161354,9905.4043};
-			name="Town_no_spawn_9";
+			position[]={8463.3623,306.61816,2453.2534};
+			name="TownPvP_8";
 			type="Empty";
-			colorName="ColorKhaki";
+		};
+		class Item123
+		{
+			position[]={10141.337,346.68567,2337.3013};
+			name="TownPvP_9";
+			type="Empty";
 		};
 	};
 };
