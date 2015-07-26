@@ -35,33 +35,40 @@ smgArray = compileFinal str
 rifleArray = compileFinal str
 [
 	// Underwater Gun
-	["SDAR Underwater Rifle", "arifle_SDAR_F", 1000]
+	["SDAR Underwater Rifle", "arifle_SDAR_F", 1000],
 	
 	// Assault Rifles
+	["AKM", "rhs_weap_akm", 200],
+	["AK-74", "rhs_weap_ak74M", 300],
+	["M4A1", "rhs_weap_m4a1", 300],
+    ["M16A4", "rhs_weap_m16a4", 300]
 ];
 
 lmgArray = compileFinal str
 [
-	["MX SW LMG", "arifle_MX_SW_F", 300]
+	["RPK-74M", "rhs_weap_rpk74m", 500]
 ];
 
 shotgunArray = compileFinal str
 [
 	// Currently unused
+	["M590A1 (Long)", "rhs_weap_M590_8RD", 300],
+	["M590A1 (Short)", "rhs_weap_M590_5RD", 300]
 ];
 
 launcherArray = compileFinal str
 [
-	["RPG-42 Alamut", "launch_RPG32_F", 1500],
-	["Titan MPRL Launcher", "launch_I_Titan_F", 2000]
+	["RPG-7", "rhs_weap_rpg7", 1500],
+	["FIM92 Stinger", "rhs_weap_fim92", 2000]
 ];
 
 allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call rifleArray + call lmgArray + call launcherArray);
 
 staticGunsArray = compileFinal str
 [
-	["M2 HMG .50 Low tripod (NATO)", "B_HMG_01_F", 10000],
-	["M2 HMG .50 High tripod (NATO)", "B_HMG_01_high_F", 10000]
+	["M2 HMG .50 Tripod Bag", "RHS_M2_Tripod_Bag", 1000],
+	["M2 HMG .50 Low Tripod Bag", "RHS_M2_MiniTripod_Bag", 1000],
+	["M2 HMG .50 Bag", "RHS_M2_Gun_Bag", 10000]
 ];
 
 throwputArray = compileFinal str
@@ -95,7 +102,13 @@ ammoArray = compileFinal str
 	[".45 ACP 9Rnd Mag", "9Rnd_45ACP_Mag", 10],
 	[".45 ACP 11Rnd Mag", "11Rnd_45ACP_Mag", 15],
 	[".45 ACP 30Rnd Vermin Mag", "30Rnd_45ACP_MAG_SMG_01", 20],
-	["5.56mm 20Rnd Underwater Mag", "20Rnd_556x45_UW_mag", 10]
+	["7.62mm 30Rnd AKM Mag", "rhs_30Rnd_762x39mm", 40], 
+	["5.56mm 20Rnd Underwater Mag", "20Rnd_556x45_UW_mag", 10],
+	["5.56mm 30Rnd NATO Mag", "rhs_mag_30Rnd_556x45_Mk318_Stanag", 50],
+	["5.45mm 30Rnd AK-74 Mag", "rhs_30Rnd_545x39_AK", 50],
+	["5.45mm 45Rnd RPK-74 Mag", "rhs_45Rnd_545x39_AK", 75],
+	["RPG-7VL", "rhs_rpg7_PG7VL_mag", 500],
+	["FIM-92 Stinger", "rhs_fim92_mag", 1000]
 ];
 
 //Gun Store item List
@@ -114,8 +127,8 @@ accessoriesArray = compileFinal str
 	["ACO (Green)", "optic_Aco_grn", 100, "item"],
 	["Holosight", "optic_Holosight", 150, "item"],
 	["MRCO", "optic_MRCO", 2500, "item"],
-	["ARCO", "optic_Arco", 3000, "item"],
-	["RCO", "optic_Hamr", 3000, "item"]
+	["ACOG (AR-15)", "rhsusf_acc_ACOG", 3000, "item"],
+	["PSO1M2 (AK)", "rhs_acc_pso1m2", 3000, "item"]
 ];
 
 // If commented, means the color/camo isn't implemented or is a duplicate of another hat
@@ -345,13 +358,13 @@ vestArray = compileFinal str
 	["Chest Rig (Khaki)", "V_Chestrig_khk", -1, "vest"],
 	["Chest Rig (Green)", "V_Chestrig_rgr", -1, "vest"],
 	["Fighter Chestrig (Black)", "V_Chestrig_blk", -1, "vest"],
-	["Fighter Chestrig (Olive)", "V_Chestrig_oli", -1, "vest"],
-	["Tactical Vest (Black)", "V_TacVest_blk", -1, "vest"],
-	["Tactical Vest (Brown)", "V_TacVest_brn", -1, "vest"],
-	["Tactical Vest (Camo)", "V_TacVest_camo", -1, "vest"],
-	["Tactical Vest (Khaki)", "V_TacVest_khk", -1, "vest"],
-	["Tactical Vest (Olive)", "V_TacVest_oli", -1, "vest"],
-	["Raven Night Vest", "V_TacVestIR_blk", -1, "vest"]
+	["Fighter Chestrig (Olive)", "V_Chestrig_oli", -1, "vest"]
+	// ["Tactical Vest (Black)", "V_TacVest_blk", -1, "vest"],
+	// ["Tactical Vest (Brown)", "V_TacVest_brn", -1, "vest"],
+	// ["Tactical Vest (Camo)", "V_TacVest_camo", -1, "vest"],
+	// ["Tactical Vest (Khaki)", "V_TacVest_khk", -1, "vest"],
+	// ["Tactical Vest (Olive)", "V_TacVest_oli", -1, "vest"],
+	// ["Raven Night Vest", "V_TacVestIR_blk", -1, "vest"]
 ];
 
 backpackArray = compileFinal str

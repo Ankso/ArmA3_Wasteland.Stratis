@@ -15,16 +15,34 @@ _setupVars =
 {
 	_vehicleClass =
 	[
-		"B_APC_Wheeled_01_cannon_F",
-		"O_APC_Wheeled_02_rcws_F",
-		"I_APC_Wheeled_03_cannon_F"
+		"rhs_btr60_vmf",
+		"rhs_btr60_vdv",
+		"rhs_btr60_vv",
+		"rhs_btr60_msv",
+		"rhs_btr70_vmf",
+		"rhs_btr70_vdv",
+		"rhs_btr70_vv",
+		"rhs_btr70_msv",
+		"rhs_btr80_msv",
+		"rhs_btr80_vdv",
+		"rhs_btr80a_msv",
+		"rhs_btr80a_vv",
+		"rhs_btr70_chdkz",
+		"rhsusf_m113_usarmy",
+		"rhsusf_m113d_usarmy",
+		"rhsusf_m113_usarmy",
+		"rhsusf_m113d_usarmy",
+		"rhs_zsu234_aa",
+		"rhs_zsu234_chdkz",
+		"rhs_zsu234_aa",
+		"rhs_zsu234_chdkz"
 	] call SGC_fnc_selectRandom;
 
 	_missionType = switch (true) do
 	{
-		case ({_vehicleClass isKindOf _x} count ["B_APC_Tracked_01_AA_F", "O_APC_Tracked_02_AA_F"] > 0): { "Anti Aircraft Vehicle" };
-		case (_vehicleClass isKindOf "Tank_F"):                                                          { "Infantry Fighting Vehicle" };
-		default                                                                                          { "Armored Personnel Carrier" };
+		case ({_vehicleClass isKindOf _x} count ["rhs_zsu234_aa", "rhs_zsu234_chdkz"] > 0): { "Anti Aircraft Vehicle" };
+		case (_vehicleClass isKindOf "Tank_F"):                                             { "Infantry Fighting Vehicle" };
+		default                                                                             { "Armored Personnel Carrier" };
 	};
 
 	_locationsArray = MainMissionSpawnMarkers;

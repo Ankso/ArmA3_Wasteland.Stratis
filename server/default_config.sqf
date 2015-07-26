@@ -13,7 +13,7 @@ A3W_disableGlobalVoice = 1;        // Auto-switch channel to Direct communicatio
 A3W_uavControl = "group";          // Restrict connection to UAVs based on ownership ("owner", "group", "side")
 
 // Time settings
-A3W_startHour = 15;                // In-game hour at mission start (0 to 23) - time is saved and restored between server restarts if A3W_timeSaving = 1
+A3W_startHour = 7;                // In-game hour at mission start (0 to 23) - time is saved and restored between server restarts if A3W_timeSaving = 1
 A3W_timeMultiplierDay = 9.0;       // Sets the speed of time between 5 AM and 8 PM (for example, 6.0 means 6 hours in-game will pass in 1 real hour)
 A3W_timeMultiplierNight = 12.0;     // Sets the speed of time between 8 PM and 5 AM
 A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
@@ -22,7 +22,7 @@ A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 A3W_startingMoney = 100;           // Amount of money that players start with
 A3W_survivalSystem = 1;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
 A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
-A3W_bleedingTime = 60;             // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
+A3W_bleedingTime = 180;            // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
 
 // Spawn settings
 A3W_townSpawnCooldown = 5*60;      // Number of seconds to wait between each spawn on a specific town (0 = disabled)
@@ -115,7 +115,7 @@ A3W_essentialsSpawning = 1;        // If serverSpawning = 1, spawn essential ite
 // Loot settings
 A3W_buildingLootWeapons = 0;       // Spawn weapon loot in all buildings (0 = no, 1 = yes)
 A3W_buildingLootSupplies = 1;      // Spawn supply loot (backpacks & player items) in all buildings (0 = no, 1 = yes)
-A3W_buildingLootChances = 15;      // Chance percentage that loot will spawn at each spot in a building (0 to 100)
+A3W_buildingLootChances = 25;      // Chance percentage that loot will spawn at each spot in a building (0 to 100)
 A3W_vehicleLoot = 2;               // Level of loot added to vehicles (0 = none, 1 = weapon OR items, 2 = weapon AND items, 3 = two weapons AND items) - 2 or 3 recommended if buildingLoot = 0
 
 // Territory settings

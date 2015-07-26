@@ -8,7 +8,7 @@
 // This file is overriden by the external file "A3Wasteland_settings\main_config.sqf" if present
 
 // General settings
-A3W_startHour = 15;                // In-game hour at mission start (0 to 23)
+A3W_startHour = 7;                // In-game hour at mission start (0 to 23)
 A3W_timeMultiplierDay = 9.0;       // Sets the speed of time between 5 AM and 8 PM (for example, 6.0 means 6 hours in-game will pass in 1 real hour)
 A3W_timeMultiplierNight = 12.0;    // Sets the speed of time between 8 PM and 5 AM
 A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
@@ -28,7 +28,7 @@ A3W_vehiclePurchaseCooldown = 60;  // Number of seconds to wait before allowing 
 // Player settings
 A3W_startingMoney = 100;           // Amount of money that players start with
 A3W_unlimitedStamina = 0;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
-A3W_bleedingTime = 60;             // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
+A3W_bleedingTime = 180;             // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
 
 // Persistence settings
 A3W_playerSaving = 0;              // Save player data like position, health, inventory, etc. (0 = no, 1 = yes)
@@ -51,7 +51,7 @@ PDB_ObjectFileID = "A3W_";         // Object savefile prefix (change this in cas
 // Spawning settings
 A3W_serverSpawning = 1;            // Vehicle, object, and loot spawning (0 = no, 1 = yes)
 A3W_vehicleSpawning = 1;           // If serverSpawning = 1, spawn vehicles in towns (0 = no, 1 = yes)
-A3W_vehicleQuantity = 300;         // Approximate number of land vehicles to be spawned in towns
+A3W_vehicleQuantity = 130;         // Approximate number of land vehicles to be spawned in towns
 A3W_boatSpawning = 1;              // If serverSpawning = 1, spawn boats at marked areas near coasts (0 = no, 1 = yes)
 A3W_heliSpawning = 1;              // If serverSpawning = 1, spawn helicopters in some towns and airfields (0 = no, 1 = yes)
 A3W_planeSpawning = 1;             // If serverSpawning = 1, spawn planes at some airfields (0 = no, 1 = yes)
@@ -73,7 +73,7 @@ A3W_payrollAmount = 100;           // Amount of money rewarded per territory on 
 // Mission settings
 A3W_serverMissions = 1;            // Enable server missions (0 = no, 1 = yes)
 A3W_missionsDifficulty = 0;        // Missions difficulty (0 = normal, 1 = hard)
-A3W_missionsQuantity = 5;          // Number of missions running at the same time (0 to 6)
+A3W_missionsQuantity = 4;          // Number of missions running at the same time (0 to 6)
 A3W_heliPatrolMissions = 0;        // Enable missions involving flying helicopters piloted by AI (0 = no, 1 = yes)
 A3W_underWaterMissions = 1;        // Enable underwater missions which require diving gear (0 = no, 1 = yes)
 A3W_mainMissionDelay = 10*60;      // Time in seconds between Main Missions

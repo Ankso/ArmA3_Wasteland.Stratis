@@ -44,12 +44,13 @@ for "_i" from 1 to _nbUnits do
 		{
             _unit addUniform "U_B_CombatUniform_mcam_vest";
             _unit addVest "V_HarnessOGL_brn";
-			_unit addMagazine "1Rnd_HE_Grenade_shell";
-			_unit addMagazine "1Rnd_HE_Grenade_shell";
-			_unit addMagazine "1Rnd_HE_Grenade_shell";
-			_unit addMagazine "30Rnd_556x45_Stanag";
-			_unit addMagazine "30Rnd_556x45_Stanag";
-			_unit addWeapon "arifle_Mk20_GL_F";
+			_unit addMagazine "rhs_30Rnd_545x39_AK";
+			_unit addMagazine "rhs_30Rnd_545x39_AK";
+			_unit addMagazine "rhs_VOG25";
+			_unit addMagazine "rhs_VOG25";
+			_unit addMagazine "rhs_VOG25P";
+			_unit addMagazine "rhs_VOG25P";
+			_unit addWeapon "rhs_weap_ak74m_gp25";
 			_unit addWeapon "SmokeShell";
 		};
 		// AT every 5 units
@@ -58,16 +59,11 @@ for "_i" from 1 to _nbUnits do
             _unit addUniform "U_B_CombatUniform_mcam_vest";
             _unit addBackpack "B_Kitbag_mcamo";
             _unit addVest "V_Chestrig_khk";
-			_unit addMagazine "1Rnd_HE_Grenade_shell";
-			_unit addMagazine "1Rnd_HE_Grenade_shell";
-			_unit addMagazine "1Rnd_HE_Grenade_shell";
-			_unit addMagazine "30Rnd_556x45_Stanag";
-			_unit addMagazine "30Rnd_556x45_Stanag";
-			_unit addWeapon "arifle_Mk20_GL_F";
+			_unit addMagazine "rhs_30Rnd_545x39_AK";
+			_unit addMagazine "rhs_30Rnd_545x39_AK";
+			_unit addWeapon "rhs_weap_ak74m";
 			_unit addWeapon "SmokeShell";
-		    _unit addWeapon "launch_RPG32_F";
-		    _unit addMagazine "RPG32_F";
-		    _unit addMagazine "RPG32_F";
+		    _unit addWeapon "rhs_weap_rpg18";
 		};
 		// Rifleman
 		default
@@ -79,11 +75,11 @@ for "_i" from 1 to _nbUnits do
                 // The officer is the only one that has pistol and uniform
                 _unit addUniform "U_I_OfficerUniform";
                 _unit addVest (["V_TacVest_blk", "V_TacVest_brn", "V_TacVest_camo", "V_TacVest_khk", "V_TacVest_oli", "V_TacVestCamo_khk", "V_TacVestIR_blk"] call SGC_fnc_selectRandom);
-				_unit addWeapon "arifle_TRG21_ACO_pointer_F";
-				_unit addMagazine "30Rnd_556x45_Stanag";
-                _unit addMagazine "30Rnd_556x45_Stanag";
-                _unit addMagazine "30Rnd_556x45_Stanag";
-                _unit addMagazine "30Rnd_556x45_Stanag";
+				_unit addWeapon "rhs_m4_grip_compm4";
+				_unit addMagazine "rhs_mag_30Rnd_556x45_Mk318_Stanag";
+                _unit addMagazine "rhs_mag_30Rnd_556x45_Mk262_Stanag";
+                _unit addMagazine "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+                _unit addMagazine "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer";
                 _unit addWeapon "hgun_P07_F";
                 _unit addMagazine "16Rnd_9x21_Mag";
                 _unit addMagazine "16Rnd_9x21_Mag";
@@ -94,16 +90,15 @@ for "_i" from 1 to _nbUnits do
 			{
                 _unit addUniform "U_B_CombatUniform_mcam";
                 _unit addVest (["V_BandollierB_khk", "V_BandollierB_cbr", "V_BandollierB_oli", "V_BandollierB_rgr"] call SGC_fnc_selectRandom);
-                _unitWeapon = ["arifle_Mk20_F", "arifle_Mk20C_F", "arifle_TRG20_F", "hgun_PDW2000_F", "SMG_01_F", "SMG_02_F", "SMG_02_F", "hgun_PDW2000_F"] call SGC_fnc_selectRandom;
+                _unitWeapon = ["rhs_weap_akm", "rhs_weap_ak74m", "rhs_weap_ak74m_desert_npz", "rhs_weap_akms", "SMG_01_F", "SMG_02_F", "SMG_02_F", "hgun_PDW2000_F"] call SGC_fnc_selectRandom;
                 switch (_unitWeapon) do
                 {
-                    case "arifle_Mk20_F";
-                    case "arifle_TRG20_F";
-                    case "arifle_Mk20C_F":
+                    case "rhs_weap_akms";
+                    case "rhs_weap_akm":
                     {
-                        _unit addMagazine "30Rnd_556x45_Stanag";
-                        _unit addMagazine "30Rnd_556x45_Stanag";
-                        _unit addMagazine "30Rnd_556x45_Stanag";
+                        _unit addMagazine "rhs_30Rnd_762x39mm";
+                        _unit addMagazine "rhs_30Rnd_762x39mm_89";
+                        _unit addMagazine "rhs_30Rnd_762x39mm_tracer";
                     };
                     case "hgun_PDW2000_F";
                     case "SMG_02_F":
@@ -120,9 +115,9 @@ for "_i" from 1 to _nbUnits do
                     };
                     default
                     {
-                        _unit addMagazine "30Rnd_556x45_Stanag";
-                        _unit addMagazine "30Rnd_556x45_Stanag";
-                        _unit addMagazine "30Rnd_556x45_Stanag";
+                        _unit addMagazine "rhs_30Rnd_545x39_AK";
+                        _unit addMagazine "rhs_30Rnd_545x39_AK";
+                        _unit addMagazine "rhs_30Rnd_545x39_AK";
                     };
                 };
 				_unit addWeapon _unitWeapon;

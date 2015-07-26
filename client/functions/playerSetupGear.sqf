@@ -37,15 +37,15 @@ switch (true) do
 {
 	case (["_medic_", typeOf _player] call fn_findString != -1):
 	{
-        _player addBackpack "B_AssaultPack_rgr";
-		_player removeItem "FirstAidKit";
-		_player addItem "Medikit";
+        // _player addBackpack "B_AssaultPack_rgr";
+		// _player removeItem "FirstAidKit";
+		// _player addItem "Medikit";
 	};
 	case (["_engineer_", typeOf _player] call fn_findString != -1):
 	{
-        _player addBackpack "B_AssaultPack_rgr";
-		_player addItem "MineDetector";
-		_player addItem "Toolkit";
+        // _player addBackpack "B_AssaultPack_rgr";
+		// _player addItem "MineDetector";
+		// _player addItem "Toolkit";
 	};
 };
 

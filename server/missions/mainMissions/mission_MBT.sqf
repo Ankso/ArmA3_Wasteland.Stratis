@@ -15,11 +15,31 @@ _setupVars =
 {
 	_vehicleClass =
 	[
-		"I_APC_tracked_03_cannon_F",
-		"O_APC_Tracked_02_cannon_F",
-		"B_APC_Tracked_01_rcws_F",
-		"B_APC_Tracked_01_rcws_F",
-		"B_APC_Tracked_01_rcws_F"
+		"rhs_t72ba_tv",
+		"rhs_t80b",
+		"rhs_t72bc_tv",
+		"rhs_t72bd_tv",
+		"rhs_bmp1_vdv",
+		"rhs_bmp1p_vdv",
+		"rhs_bmp1k_msv",
+		"rhs_bmp1d_tv",
+		"rhs_bmp2e_vdv",
+		"rhs_bmp2_tv",
+		"rhs_bmp2k_msv",
+		"rhs_bmp2d_vmf",
+		"rhs_bmd2_chdkz",
+		"rhs_bmd1",
+		"rhs_bmd1k",
+		"rhs_bmd1pk",
+		"rhs_bmd2m",
+		"rhs_bmd2k",
+		"rhs_prp3_vdv",
+		"rhs_prp3_msv",
+		"rhs_prp3_vmf",
+		"RHS_M2A2",
+		"RHS_M2A2_BUSKI",
+		"rhs_bmd4_vdv",
+		"rhs_bmd4ma_vdv"
 	] call SGC_fnc_selectRandom;
 
 	_missionType = "Main Battle Tank";

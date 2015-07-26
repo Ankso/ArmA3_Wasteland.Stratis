@@ -17,7 +17,14 @@ _setupVars =
 	[
 		"B_MRAP_01_hmg_F",
 		"O_MRAP_02_hmg_F",
-		"I_MRAP_03_hmg_F"
+		"I_MRAP_03_hmg_F",
+		"rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy",
+		"rhsusf_M1078A1P2_B_M2_d_open_fmtv_usarmy",
+		"rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy",
+		"rhsusf_rg33_m2_usmc_d",
+		"rhsusf_rg33_m2_d",
+		"rhsusf_rg33_usmc_d",
+		"rhsusf_rg33_m2_d"
 	] call SGC_fnc_selectRandom;
 
 	_missionType = "Light Armed Vehicle";

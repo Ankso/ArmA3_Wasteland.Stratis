@@ -13,7 +13,7 @@ private ["_vehicleClass", "_nbUnits"];
 
 _setupVars =
 {
-	_vehicleClass = ["I_Heli_Transport_02_F", "O_Heli_Light_02_unarmed_F", "B_Heli_Light_01_F"] call SGC_fnc_selectRandom;
+	_vehicleClass = ["I_Heli_Transport_02_F", "O_Heli_Light_02_unarmed_F", "B_Heli_Light_01_F", "RHS_Mi8mt_vvs", "RHS_Mi8mt_vvsc"] call SGC_fnc_selectRandom;
 	_missionType = "Transport Helicopter";
 	_locationsArray = MainMissionSpawnMarkers;
 

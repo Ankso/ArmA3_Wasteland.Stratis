@@ -20,7 +20,13 @@ _setupVars =
 		"B_Plane_CAS_01_F",
 		"O_Plane_CAS_02_F",
 		"I_Plane_Fighter_03_AA_F",
-		"I_Plane_Fighter_03_CAS_F"
+		"I_Plane_Fighter_03_CAS_F",
+		"RHS_Su25SM_vvs",
+		"RHS_Su25SM_KH29_vvs",
+		"RHS_Su25SM_vvsc",
+		"RHS_Su25SM_KH29_vvsc",
+		"RHS_Su25SM_vvsc",
+		"RHS_Su25SM_KH29_vvsc"
 	] call SGC_fnc_selectRandom;
 
 	_missionType = "Armed Jet";

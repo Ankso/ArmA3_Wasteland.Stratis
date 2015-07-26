@@ -30,7 +30,16 @@ civilianVehicles =
 	"C_Offroad_01_F",
 	"C_Offroad_01_F",
 	"C_Van_01_box_F",
-	"C_Van_01_transport_F"
+	"C_Van_01_transport_F",
+	"RHS_Uaz_msv_01",
+	"rhs_uaz_open_MSV_01",
+	"rhs_uaz_open_MSV_01",
+	"rhs_gaz66_msv",
+	"rhs_gaz66_flat_msv",
+	"rhs_gaz66o_flat_msv",
+	"RHS_Ural_MSV_01",
+	"RHS_Ural_Open_MSV_01",
+	"RHS_Ural_Open_Flat_MSV_01"
 ];
 
 //Light Military Vehicle List - Random Spawns
@@ -45,15 +54,26 @@ lightMilitaryVehicles =
 	"B_Truck_01_transport_F",
 	"B_G_Offroad_01_F",
 	"B_G_Offroad_01_F",
-	"B_G_Offroad_01_F",
-	"B_G_Offroad_01_F",
-	"B_G_Offroad_01_F"
+	"rhs_uaz_open_vdv",
+	"rhs_uaz_vmf",
+	"rhs_gaz66_vv",
+	"rhs_gaz66o_vdv",
+	"RHS_Ural_VMF_01",
+	"RHS_Ural_Open_VDV_01",
+	"rhsusf_m1025_w",
+	"rhsusf_m1025_d",
+	"rhsusf_m1025_w_s",
+	"rhsusf_m1025_d_s",
+	"rhsusf_M1078A1P2_B_wd_fmtv_usarmy",
+	"rhsusf_M1078A1P2_wd_fmtv_usarmy"
 ];
 
 //Medium Military Vehicle List - Random Spawns
 mediumMilitaryVehicles =
 [
-    "B_G_Offroad_01_armed_F"
+    "B_G_Offroad_01_armed_F",
+    "RHS_UAZ_chdkz",
+    "rhs_uaz_open_chdkz"
 ];
 
 //Water Vehicles - Random Spawns
@@ -132,7 +152,9 @@ staticHeliList =
 	"O_Heli_Light_02_unarmed_F",
 	"I_Heli_light_03_unarmed_F",
 	"I_Heli_Transport_02_F",
-	"C_Heli_Light_01_civil_F"
+	"C_Heli_Light_01_civil_F",
+	"RHS_Mi8mt_vvs",
+	"RHS_Mi8mt_Cargo_vvs"
 ];
 
 //Object List - Random Planes.
@@ -141,7 +163,11 @@ staticPlaneList =
 	"B_Plane_CAS_01_F",
 	"O_Plane_CAS_02_F",
 	"I_Plane_Fighter_03_CAS_F",
-	"I_Plane_Fighter_03_AA_F"
+	"I_Plane_Fighter_03_AA_F",
+	"RHS_Su25SM_vvs",
+	"RHS_Su25SM_KH29_vvs",
+	"RHS_Su25SM_vvsc",
+	"RHS_Su25SM_KH29_vvsc"
 ];
 
 //Random Weapon List - Change this to what you want to spawn in cars
@@ -157,11 +183,22 @@ vehicleWeapons =
 	// -- SMGs --
 	"SMG_01_F",
 	"SMG_02_F",
+	"SMG_01_F",
+	"SMG_02_F",
 	
 	// -- Assault Rifles --
-	"arifle_Mk20_F",
-	"arifle_SDAR_F",
-	"arifle_TRG20_F"
+	"rhs_weap_akm",
+	"rhs_weap_akms",
+	"rhs_weap_akm_gp25",
+	"rhs_weap_akms_gp25",
+	"rhs_weap_m4",
+	"rhs_weap_ak74m",
+	"rhs_weap_m16a4",
+	"rhs_weap_aks74u",
+	
+	// -- Shotguns --
+	"rhs_weap_M590_8RD",
+	"rhs_weap_M590_5RD"
 ];
 
 vehicleWeaponsMilitary =
@@ -177,59 +214,67 @@ vehicleWeaponsMilitary =
 	"SMG_02_F",
 	"SMG_01_F",
 	"SMG_02_F",
-	"SMG_01_F",
-	"SMG_02_F",
-	"SMG_01_F",
-	"SMG_02_F",
 	
 	// -- Assault Rifles --
-	"arifle_Mk20_F",
-	"arifle_Mk20_GL_F",
-	"arifle_Mk20C_F",
-	"arifle_SDAR_F",
-	"arifle_TRG20_F",
-	"arifle_TRG21_GL_F",
-	"arifle_TRG21_F",
-	"arifle_Mk20_F",
-	"arifle_Mk20_GL_F",
-	"arifle_Mk20C_F",
-	"arifle_SDAR_F",
-	"arifle_TRG20_F",
-	"arifle_TRG21_GL_F",
-	"arifle_TRG21_F",
-	"arifle_Mk20_F",
-	"arifle_Mk20_GL_F",
-	"arifle_Mk20C_F",
-	"arifle_SDAR_F",
-	"arifle_TRG20_F",
-	"arifle_TRG21_GL_F",
-	"arifle_TRG21_F",
-	"arifle_Mk20_F",
-	"arifle_Mk20_GL_F",
-	"arifle_Mk20C_F",
-	"arifle_SDAR_F",
-	"arifle_TRG20_F",
-	"arifle_TRG21_GL_F",
-	"arifle_TRG21_F",
-	"arifle_SDAR_F",
-	"arifle_TRG20_F",
-	"arifle_TRG21_GL_F",
-	"arifle_TRG21_F",
+	"rhs_weap_m16a4",
+	"rhs_weap_m16a4_carryhandle",
+	"rhs_weap_m16a4_carryhandle_pmag",
+	"rhs_weap_m16a4_bipod",
+	"rhs_weap_m16a4_carryhandle_bipod",
+	"rhs_weap_m16a4_grip",
+	"rhs_weap_m16a4_carryhandle_grip",
+	"rhs_weap_m16a4_carryhandle_grip_pmag",
+	"rhs_weap_m16a4_carryhandle_M203",
+	"rhs_weap_m4a1_m320",
+	"rhs_weap_m4a1_m203",
+	"rhs_weap_m4a1",
+	"rhs_weap_m4a1_carryhandle",
+	"rhs_weap_m4a1_carryhandle_pmag",
+	"rhs_weap_m4a1_blockII",
+	"rhs_weap_m4a1_blockII_KAC",
+	"rhs_weap_m4a1_blockII_grip2",
+	"rhs_weap_m4a1_blockII_grip2_KAC",
+	"rhs_weap_ak103",
+	"rhs_weap_ak103_dtk",
+	"rhs_weap_ak103_npz",
+	"rhs_weap_ak74m",
+	"rhs_weap_ak74m_dtk",
+	"rhs_weap_ak74m_camo",
+	"rhs_weap_ak74m_npz",
+	"rhs_weap_ak74m_desert_npz",
+	"rhs_weap_ak74m_folded",
+	"rhs_weap_ak74m_camo_folded",
+	"rhs_weap_ak74m_desert_folded",
+	"rhs_weap_ak74m_plummag_folded",
+	"rhs_weap_ak74m_gp25_folded",
+	"rhs_weap_ak74m_2mag",
+	"rhs_weap_ak74m_2mag_npz",
+	"rhs_weap_ak74m_2mag_dtk",
+	"rhs_weap_ak74m_2mag_camo_npz",
+	"rhs_weap_ak74m_desert",
+	"rhs_weap_ak74m_gp25",
+	"rhs_weap_ak74m_gp25_npz",
+	"rhs_weap_ak74",
+	"rhs_weap_ak74_gp25",
+	"rhs_weap_aks74",
     
     // -- Assault Rifles (powerful) --
-    "arifle_MXC_F",
-    "arifle_Katiba_C_F",
-    "arifle_Katiba_F",
-    "arifle_MX_pointer_F",
+    "rhs_weap_sr25",
+    "rhs_weap_sr25_ec",
+    "rhs_weap_sr25",
+    "rhs_weap_sr25_ec",
     
     // -- MGs --
-    "arifle_MX_SW_F",
+    "rhs_weap_m249_pip",
+    "rhs_weap_rpk74m",
     
 	// -- Sniper Rifles --
-	"srifle_DMR_01_F",
+	"rhs_weap_svd",
+	"rhs_weap_m14ebrri",
 	
 	// -- Rocket Launchers --
-	"launch_RPG32_F"
+	"rhs_weap_rpg18",
+	"rhs_weap_M136_hedp"
 ];
 
 vehicleAddition =
@@ -241,9 +286,10 @@ vehicleAddition =
 	// -- Optics --
 	"optic_Holosight",
 	"optic_Holosight_smg",
-	"optic_Holosight_smg",
     "optic_Aco",
 	"optic_ACO_grn_smg",
+	"rhsusf_acc_compm4",
+	"rhsusf_acc_eotech_552",
 	
 	// -- Others --
 	"acc_flashlight",
@@ -257,12 +303,15 @@ vehicleAddition =
 	"acc_pointer_IR",
 	"acc_pointer_IR",
 	"Medikit",
-	"Medikit",
-	"Medikit",
-	"Medikit",
-	"Medikit",
-	"Medikit",
 	"FirstAidKit",
+	"FirstAidKit",
+	"FirstAidKit",
+	"FirstAidKit",
+	"FirstAidKit",
+	"FirstAidKit",
+	"FirstAidKit",
+	"FirstAidKit",
+    "FirstAidKit",
 	"ToolKit"
 ];
 
@@ -272,11 +321,14 @@ vehicleAdditionMilitary =
     "muzzle_snds_acp",
 	"muzzle_snds_L",
 	"muzzle_snds_acp",
-	"muzzle_snds_L",
-	"muzzle_snds_M",
-	"muzzle_snds_acp",
-	"muzzle_snds_L",
-	"muzzle_snds_M",
+	"rhs_acc_pbs1",
+	"rhs_acc_muzzleFlash_dtk",
+	"rhs_acc_tgpa",
+	"rhs_acc_tgpv",
+	"rhsusf_acc_M2010S",
+	"rhsusf_acc_rotex5_grey",
+	"rhsusf_acc_nt4_black",
+	
 	
     // -- Optics --
 	"optic_Aco",
@@ -284,28 +336,33 @@ vehicleAdditionMilitary =
 	"optic_aco_smg",
 	"optic_Holosight",
 	"optic_Holosight_smg",
+	"rhsusf_acc_compm4",
+	"rhsusf_acc_eotech_552",
 	"optic_Aco",
 	"optic_ACO_grn",
 	"optic_aco_smg",
 	"optic_Holosight",
 	"optic_Holosight_smg",
-	"optic_ACO_grn_smg",
-	"optic_Aco",
-	"optic_ACO_grn",
-	"optic_aco_smg",
-	"optic_Holosight",
-	"optic_Holosight_smg",
-	"optic_ACO_grn_smg",
+	"rhsusf_acc_compm4",
+	"rhsusf_acc_eotech_552",
 	
     // -- Scopes --
-	"optic_Hamr",
+	"rhsusf_acc_ACOG",
 	
     // -- Others --
+    "rhsusf_acc_harris_bipod",
+    "rhsusf_acc_anpeq15",
+    "rhsusf_acc_anpeq15_light",
+    "rhsusf_acc_muzzleFlash_SF",
+    "FirstAidKit",
+    "FirstAidKit",
+    "FirstAidKit",
+    "FirstAidKit",
+    "FirstAidKit",
     "FirstAidKit",
 	"ToolKit",
     "Medikit",
-    "NVGoggles", // Very rare
-    "ItemGPS"
+    "NVGoggles" // Very rare
 ];
 
 vehicleAddition2 =
@@ -316,18 +373,21 @@ vehicleAddition2 =
 	"Chemlight_red",
 	"HandGrenade",
 	"MiniGrenade",
-	"1Rnd_HE_Grenade_shell",
-	"UGL_FlareWhite_F",
-	"UGL_FlareGreen_F",
-	"UGL_FlareRed_F",
-	"1Rnd_Smoke_Grenade_shell",
-	"1Rnd_SmokeRed_Grenade_shell",
-	"1Rnd_SmokeGreen_Grenade_shell",
-	"1Rnd_SmokePurple_Grenade_shell",
-	"UGL_FlareCIR_F",
+	"rhs_mag_M433_HEDP",
+	"rhs_VOG25",
+	"rhs_VG40OP_white",
+	"rhs_VG40OP_green",
+	"rhs_VG40OP_red",
+	"rhs_mag_M585_white",
+	"rhs_mag_m661_green",
+	"rhs_mag_m662_red",
+	"rhs_mag_m18_green",
 	"SmokeShell",
 	"SmokeShellYellow",
 	"SmokeShellOrange",
 	"SmokeShellBlue",
-	"HandGrenade"
+	"HandGrenade",
+	"ItemGPS",
+	"ItemGPS",
+	"ItemGPS"
 ];
