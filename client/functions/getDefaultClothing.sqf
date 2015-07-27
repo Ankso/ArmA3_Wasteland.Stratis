@@ -28,7 +28,7 @@ _defaultVest = "rhs_6sh46";
 _headGearBlufor = ["rhs_fieldcap_ml", "rhsusf_patrolcap_ucp"];
 _headGearOpfor = ["H_Bandanna_camo", "H_Bandanna_khk", "H_Beret_ocamo", "rhs_beanie_green"];
 _headGearIndependent = ["H_Booniehat_dgtl", "H_Booniehat_indp"];
-_vestIndependent = ["rhs_vest_commander"];
+_vestIndependent = ["U_I_OfficerUniform"];
 
 _result = "";
 
@@ -95,7 +95,7 @@ switch (_side) do
 			default
 			{
 				if (_item == "uniform") then { _result = _vestIndependent call SGC_fnc_selectRandom };
-				if (_item == "vest") then { _result = _defaultVest };
+				if (_item == "vest") then { _result = "rhs_vest_commander" };
 			};
 		};
 
