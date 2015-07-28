@@ -23,14 +23,28 @@ _setupObjects =
 	switch (true) do
 	{
 		// GMG MRAPs
-		/*case ({ _vehicle isKindOf _x } count ["MRAP_01_gmg_base_F","MRAP_02_gmg_base_F","MRAP_03_gmg_base_F"] > 0):
+		case ({ _vehicle isKindOf _x } count
+		[
+            "rhs_btr60_vmf", "rhs_btr60_vdv", "rhs_btr60_vv",
+            "rhs_btr60_msv", "rhs_btr70_vmf", "rhs_btr70_vdv",
+            "rhs_btr70_vv", "rhs_btr70_msv", "rhs_btr80_msv",
+            "rhs_btr80_vdv", "rhs_btr80a_msv", "rhs_btr80a_vv",
+            "rhs_btr70_chdkz", "rhsusf_m113_usarmy", "rhsusf_m113d_usarmy",
+            "rhsusf_m113_usarmy", "rhsusf_m113d_usarmy", "rhs_zsu234_aa",
+            "rhs_zsu234_chdkz", "rhs_zsu234_aa", "rhs_zsu234_chdkz",
+            "rhs_t72ba_tv", "rhs_t80b", "rhs_t72bc_tv",
+            "rhs_t72bd_tv", "rhs_bmp1_vdv", "rhs_bmp1p_vdv",
+            "rhs_bmp1k_msv", "rhs_bmp1d_tv", "rhs_bmp2e_vdv",
+            "rhs_bmp2_tv", "rhs_bmp2k_msv", "rhs_bmp2d_vmf",
+            "rhs_bmd2_chdkz", "rhs_bmd1", "rhs_bmd1k",
+            "rhs_bmd1pk", "rhs_bmd2m", "rhs_bmd2k",
+            "rhs_prp3_vdv", "rhs_prp3_msv", "rhs_prp3_vmf",
+            "RHS_M2A2", "RHS_M2A2_BUSKI", "rhs_bmd4_vdv", "rhs_bmd4ma_vdv"
+        ] > 0):
 		{
-			_vehicle setVehicleAmmoDef 1;
-
-			// Reduce grenades to 50
-			_vehicle removeMagazines "96Rnd_40mm_G_belt";
-			_vehicle addMagazine ["96Rnd_40mm_G_belt", 50];
-		};*/
+			// Empty the fuel tank
+			_vehicle setFuel 0;
+		};
 
 		// AMV-7 Marshall
 		case (_vehicle isKindOf "B_APC_Wheeled_01_cannon_F"):
@@ -80,12 +94,14 @@ _setupObjects =
 		{
 			// Cut all ammo by half
 			_vehicle setVehicleAmmoDef 0.5;
+			_vehicle setFuel 0;
 		};
 		
 		// All planes
 		case (_vehicle isKindOf "Plane"):
 		{
 			_vehicle setVehicleAmmoDef 0.5;
+			_vehicle setFuel 0;
 		};
 	};
 

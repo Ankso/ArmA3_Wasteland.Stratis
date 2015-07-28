@@ -79,7 +79,10 @@ class Mission
 		"A3_Data_F",
 		"A3_Soft_F_Truck",
 		"A3_Structures_F_EPC_Civ_Accessories",
-		"aia_takistan_config"
+		"aia_takistan_config",
+		"rhs_c_cars",
+		"rhsusf_c_hmmwv",
+		"rhsusf_vehicles"
 	};
 	addOnsAuto[]=
 	{
@@ -89,6 +92,9 @@ class Mission
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_INDEP",
 		"A3_Soft_F_Truck",
+		"rhs_c_cars",
+		"rhsusf_c_hmmwv",
+		"rhsusf_vehicles",
 		"aia_takistan_config"
 	};
 	randomSeed=14957468;
@@ -112,7 +118,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=41;
+		items=43;
 		class Item0
 		{
 			side="WEST";
@@ -1817,15 +1823,55 @@ class Mission
 				};
 			};
 		};
+		class Item41
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3297.5608,298.67233,3698.2886};
+					azimut=464.28671;
+					id=147;
+					side="LOGIC";
+					vehicle="C_man_1_1_F";
+					leader=1;
+					skill=0.60000002;
+					text="GenStore2";
+					init="[this, 'GenStore', 2] spawn A3W_fnc_setupStoreNPC";
+				};
+			};
+		};
+		class Item42
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11895.96,332.81134,7405.9175};
+					azimut=464.28671;
+					id=148;
+					side="LOGIC";
+					vehicle="C_man_1_1_F";
+					leader=1;
+					skill=0.60000002;
+					text="GenStore3";
+					init="[this, 'GenStore', 3] spawn A3W_fnc_setupStoreNPC";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=3;
+		items=5;
 		class Item0
 		{
 			position[]={5924.2139,83.040001,11867.022};
 			azimut=65.820892;
-			id=147;
+			id=149;
 			side="EMPTY";
 			vehicle="C_Van_01_fuel_F";
 			skill=0.60000002;
@@ -1834,7 +1880,7 @@ class Mission
 		{
 			position[]={5729.126,83.050003,11234.8};
 			azimut=313.63519;
-			id=148;
+			id=150;
 			side="EMPTY";
 			vehicle="C_Van_01_fuel_F";
 			skill=0.60000002;
@@ -1843,15 +1889,31 @@ class Mission
 		{
 			position[]={8175.8062,296.04001,2039.1658};
 			azimut=148.22874;
-			id=149;
+			id=151;
 			side="EMPTY";
 			vehicle="C_Van_01_fuel_F";
+			skill=0.60000002;
+		};
+		class Item3
+		{
+			position[]={-2251.6729,91.290001,14591.031};
+			id=152;
+			side="EMPTY";
+			vehicle="rhs_tigr_msv";
+			skill=0.60000002;
+		};
+		class Item4
+		{
+			position[]={-1944.6029,91.290001,14655.678};
+			id=153;
+			side="EMPTY";
+			vehicle="rhsusf_m1025_w";
 			skill=0.60000002;
 		};
 	};
 	class Markers
 	{
-		items=124;
+		items=127;
 		class Item0
 		{
 			position[]={1823.1123,145.87,11943.202};
@@ -2454,7 +2516,7 @@ class Mission
 		{
 			position[]={102.04227,97.347237,13508.063};
 			name="missionDesc_1";
-			text="Balanced vehicles: No more MBTs or attack helicopters camping you from 1.5km+. The best you'll find are some tracked APCs";
+			text="Balanced vehicles: MBTs are really rare and old, cold-war era vehicles. Armored vehicles can no longer be bought in the stores to avoid armored spam.";
 			type="mil_dot";
 			colorName="ColorBlue";
 		};
@@ -2771,6 +2833,34 @@ class Mission
 			position[]={10141.337,346.68567,2337.3013};
 			name="TownPvP_9";
 			type="Empty";
+		};
+		class Item124
+		{
+			position[]={8022.3608,296.04001,1885.6183};
+			name="airSpawn_2";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=450;
+			b=180;
+			angle=-209.70595;
+		};
+		class Item125
+		{
+			position[]={3298.1626,298.47235,3699.7087};
+			name="GenStore2_objSpawn";
+			type="Empty";
+			colorName="ColorBlack";
+			angle=193.258;
+		};
+		class Item126
+		{
+			position[]={11896.562,332.7207,7407.3374};
+			name="GenStore3_objSpawn";
+			type="Empty";
+			colorName="ColorBlack";
+			angle=193.258;
 		};
 	};
 };

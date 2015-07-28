@@ -25,76 +25,76 @@ _setupVars =
 		// Easy
 		[
 			"Money Shipment", // Marker text
-			15000, // Money
+			10000, // Money
 			[
 				[ // NATO convoy
-					["B_MRAP_01_F", "B_MRAP_01_hmg_F"], // Veh 1
-					["B_Truck_01_transport_F", "B_Truck_01_covered_F"] // Veh 2
+					["rhsusf_m1025_d", "rhsusf_m998_d_s_4dr"], // Veh 1
+					["rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy"] // Veh 2
 				],
 				[ // CSAT convoy
-					["O_MRAP_02_F", "O_MRAP_02_hmg_F"], // Veh 1
-					["O_Truck_02_transport_F", "O_Truck_02_covered_F"] // Veh 2
+					["rhs_tigr_3camo_msv", "rhs_tigr_ffv_3camo_vmf"], // Veh 1
+					["rhs_gaz66_vdv", "rhs_gaz66_flat_vdv"] // Veh 2
 				],
 				[ // AAF convoy
-					["I_MRAP_03_F", "I_MRAP_03_hmg_F"], // Veh 1
-					["I_Truck_02_transport_F", "I_Truck_02_covered_F"] // Veh 2
+					["RHS_UAZ_chdkz", "rhs_uaz_open_chdkz"], // Veh 1
+					["rhs_ural_chdkz", "rhs_ural_open_chdkz"] // Veh 2
 				]
 			]
 		],
 		// Medium
 		[
 			"Money Shipment", // Marker text
-			15000, // Money
+			10000, // Money
 			[
 				[ // NATO convoy
-					["B_MRAP_01_F", "B_MRAP_01_hmg_F"], // Veh 1
-					["B_Truck_01_transport_F", "B_Truck_01_covered_F"] // Veh 2
+					["rhsusf_m1025_d", "rhsusf_m998_d_s_4dr"], // Veh 1
+					["rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy"] // Veh 2
 				],
 				[ // CSAT convoy
-					["O_MRAP_02_F", "O_MRAP_02_hmg_F"], // Veh 1
-					["O_Truck_02_transport_F", "O_Truck_02_covered_F"] // Veh 2
+					["rhs_tigr_3camo_msv", "rhs_tigr_ffv_3camo_vmf"], // Veh 1
+					["rhs_gaz66_vdv", "rhs_gaz66_flat_vdv"] // Veh 2
 				],
 				[ // AAF convoy
-					["I_MRAP_03_F", "I_MRAP_03_hmg_F"], // Veh 1
-					["I_Truck_02_transport_F", "I_Truck_02_covered_F"] // Veh 2
+					["RHS_UAZ_chdkz", "rhs_uaz_open_chdkz"], // Veh 1
+					["rhs_ural_chdkz", "rhs_ural_open_chdkz"] // Veh 2
 				]
 			]
 		],
 		// Hard
 		[
 			"Money Shipment", // Marker text
-			15000, // Money
+			10000, // Money
 			[
 				[ // NATO convoy
-					["B_MRAP_01_F", "B_MRAP_01_hmg_F"], // Veh 1
-					["B_Truck_01_transport_F", "B_Truck_01_covered_F"] // Veh 2
+					["rhsusf_m1025_d", "rhsusf_m998_d_s_4dr"], // Veh 1
+					["rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy"] // Veh 2
 				],
 				[ // CSAT convoy
-					["O_MRAP_02_F", "O_MRAP_02_hmg_F"], // Veh 1
-					["O_Truck_02_transport_F", "O_Truck_02_covered_F"] // Veh 2
+					["rhs_tigr_3camo_msv", "rhs_tigr_ffv_3camo_vmf"], // Veh 1
+					["rhs_gaz66_vdv", "rhs_gaz66_flat_vdv"] // Veh 2
 				],
 				[ // AAF convoy
-					["I_MRAP_03_F", "I_MRAP_03_hmg_F"], // Veh 1
-					["I_Truck_02_transport_F", "I_Truck_02_covered_F"] // Veh 2
+					["RHS_UAZ_chdkz", "rhs_uaz_open_chdkz"], // Veh 1
+					["rhs_ural_chdkz", "rhs_ural_open_chdkz"] // Veh 2
 				]
 			]
 		],
 		// Extreme
 		[
 			"Money Shipment", // Marker text
-			15000, // Money
+			10000, // Money
 			[
 				[ // NATO convoy
-					["B_MRAP_01_F", "B_MRAP_01_hmg_F"], // Veh 1
-					["B_Truck_01_transport_F", "B_Truck_01_covered_F"] // Veh 2
+					["rhsusf_m1025_d", "rhsusf_m998_d_s_4dr"], // Veh 1
+					["rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy"] // Veh 2
 				],
 				[ // CSAT convoy
-					["O_MRAP_02_F", "O_MRAP_02_hmg_F"], // Veh 1
-					["O_Truck_02_transport_F", "O_Truck_02_covered_F"] // Veh 2
+					["rhs_tigr_3camo_msv", "rhs_tigr_ffv_3camo_vmf"], // Veh 1
+					["rhs_gaz66_vdv", "rhs_gaz66_flat_vdv"] // Veh 2
 				],
 				[ // AAF convoy
-					["I_MRAP_03_F", "I_MRAP_03_hmg_F"], // Veh 1
-					["I_Truck_02_transport_F", "I_Truck_02_covered_F"] // Veh 2
+					["RHS_UAZ_chdkz", "rhs_uaz_open_chdkz"], // Veh 1
+					["rhs_ural_chdkz", "rhs_ural_open_chdkz"] // Veh 2
 				]
 			]
 		]

@@ -475,7 +475,7 @@ allGenStoreVanillaItems = compileFinal str (call genItemArray + call genObjectsA
 //Text name, classname, buy cost, spawn type, sell price (selling not implemented) or spawning color
 landArray = compileFinal str
 [
-	["Kart", "C_Kart_01_F", 500, "vehicle"],
+	["Kart", "C_Kart_01_F", 100, "vehicle"],
 
 	["Quadbike (Civilian)", "C_Quadbike_01_F", 600, "vehicle"],
 	["Quadbike (NATO)", "B_Quadbike_01_F", 650, "vehicle"],

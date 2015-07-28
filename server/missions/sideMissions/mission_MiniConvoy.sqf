@@ -25,13 +25,16 @@ _setupObjects =
 	// pick the vehicles for the convoy
 	_convoyVeh = if (missionDifficultyHard) then
 	{
-		["I_G_Offroad_01_armed_F", "I_Truck_02_transport_F", "I_G_Offroad_01_F"]
+		[
+			["rhsusf_m1025_d_m2", "rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_m998_d_s_4dr_halftop"],
+			["rhsusf_m1025_d", "rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy", "rhsusf_m998_d_s_4dr_halftop"]
+		] call SGC_fnc_selectRandom;
 	}
 	else
 	{
 		[
-			["B_MRAP_01_F", "I_Truck_02_covered_F", "B_G_Offroad_01_F"],
-			["B_G_Offroad_01_F", "I_Truck_02_transport_F", "B_G_Offroad_01_F"]
+			["rhsusf_m1025_d_m2", "rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_m998_d_s_4dr_halftop"],
+			["rhsusf_m1025_d", "rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy", "rhsusf_m998_d_s_4dr_halftop"]
 		] call SGC_fnc_selectRandom;
 	};
 

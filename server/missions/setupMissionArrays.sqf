@@ -19,14 +19,14 @@ MainMissions =
 
 SideMissions =
 [
-    ["mission_MiniConvoy", 0.75],
+    ["mission_MiniConvoy", 1.5],
 	["mission_SunkenSupplies", 0.5],
 	["mission_AirWreck", 1.5],
-	["mission_WepCache", 1.5],
+	// ["mission_WepCache", 1.5],
 	["mission_Outpost", 1.5],
 	// ["mission_HostileHelicopter", 0.5],
 	// ["mission_TownInvasion", 2],
-	["mission_Truck", 1]
+	["mission_Truck", 1.5]
 ];
 
 MoneyMissions =
