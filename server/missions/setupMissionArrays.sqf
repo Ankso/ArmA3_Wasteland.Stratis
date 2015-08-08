@@ -14,19 +14,19 @@ MainMissions =
 	["mission_LightArmVeh", 0.6],
 	["mission_ArmedHeli", 0.35],
 	["mission_CivHeli", 0.5],
-	["mission_Plane", 0.25]
+	["mission_Plane", 0.20]
 ];
 
 SideMissions =
 [
-    ["mission_MiniConvoy", 1.5],
+    ["mission_MiniConvoy", 1.25],
 	["mission_SunkenSupplies", 0.5],
 	["mission_AirWreck", 1.5],
 	// ["mission_WepCache", 1.5],
 	["mission_Outpost", 1.5],
 	// ["mission_HostileHelicopter", 0.5],
 	// ["mission_TownInvasion", 2],
-	["mission_Truck", 1.5]
+	["mission_Truck", 1]
 ];
 
 MoneyMissions =

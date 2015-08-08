@@ -70,6 +70,8 @@ if (_packetName == "BIS_fnc_MP_packet") then
 		};
 	};
 
+    _whitelisted = true;
+    
 	if (_whitelisted) then
 	{
 		_this call BIS_fnc_MPexec;

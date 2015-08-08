@@ -12,6 +12,7 @@ _group = _this select 0;
 _pos = _this select 1;
 _nbUnits = [_this, 2, 7, [0]] call BIS_fnc_param;
 _radius = [_this, 3, 10, [0]] call BIS_fnc_param;
+_nbUnits = _nbUnits + 3; // Increase difficulty
 
 _unitTypes =
 [
@@ -63,7 +64,9 @@ for "_i" from 1 to _nbUnits do
 			_unit addMagazine "rhs_30Rnd_545x39_AK";
 			_unit addWeapon "rhs_weap_ak74m";
 			_unit addWeapon "SmokeShell";
-		    _unit addWeapon "rhs_weap_rpg18";
+		    _unit addWeapon "rhs_weap_rpg7";
+		    _unit addMagazine "rhs_rpg7_PG7VL_mag";
+		    _unit addMagazine "rhs_rpg7_PG7VL_mag";
 		};
 		// Rifleman
 		default
@@ -74,7 +77,7 @@ for "_i" from 1 to _nbUnits do
 			{
                 // The officer is the only one that has pistol and uniform
                 _unit addUniform "U_I_OfficerUniform";
-                _unit addVest (["V_TacVest_blk", "V_TacVest_brn", "V_TacVest_camo", "V_TacVest_khk", "V_TacVest_oli", "V_TacVestCamo_khk", "V_TacVestIR_blk"] call SGC_fnc_selectRandom);
+                _unit addVest (["V_PlateCarrier1_rgr", "V_PlateCarrier1_blk", "V_TacVestCamo_khk", "V_TacVestIR_blk"] call SGC_fnc_selectRandom);
 				_unit addWeapon "rhs_m4_grip_compm4";
 				_unit addMagazine "rhs_mag_30Rnd_556x45_Mk318_Stanag";
                 _unit addMagazine "rhs_mag_30Rnd_556x45_Mk262_Stanag";
@@ -90,7 +93,7 @@ for "_i" from 1 to _nbUnits do
 			{
                 _unit addUniform "U_B_CombatUniform_mcam";
                 _unit addVest (["V_BandollierB_khk", "V_BandollierB_cbr", "V_BandollierB_oli", "V_BandollierB_rgr"] call SGC_fnc_selectRandom);
-                _unitWeapon = ["rhs_weap_akm", "rhs_weap_ak74m", "rhs_weap_ak74m_desert_npz", "rhs_weap_akms", "SMG_01_F", "SMG_02_F", "SMG_02_F", "hgun_PDW2000_F"] call SGC_fnc_selectRandom;
+                _unitWeapon = ["rhs_weap_akm", "rhs_weap_ak74m", "rhs_weap_ak74m_desert_npz", "rhs_weap_akms", "SMG_01_Holo_F"] call SGC_fnc_selectRandom;
                 switch (_unitWeapon) do
                 {
                     case "rhs_weap_akms";
@@ -99,13 +102,6 @@ for "_i" from 1 to _nbUnits do
                         _unit addMagazine "rhs_30Rnd_762x39mm";
                         _unit addMagazine "rhs_30Rnd_762x39mm_89";
                         _unit addMagazine "rhs_30Rnd_762x39mm_tracer";
-                    };
-                    case "hgun_PDW2000_F";
-                    case "SMG_02_F":
-                    {
-                        _unit addMagazine "30Rnd_9x21_Mag";
-                        _unit addMagazine "30Rnd_9x21_Mag";
-                        _unit addMagazine "30Rnd_9x21_Mag";
                     };
                     case "SMG_01_F":
                     {

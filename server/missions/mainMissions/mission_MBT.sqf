@@ -15,10 +15,17 @@ _setupVars =
 {
 	_vehicleClass =
 	[
+        "rhs_t80b",
 		"rhs_t72ba_tv",
-		"rhs_t80b",
+		"rhs_t72ba_tv",
 		"rhs_t72bc_tv",
-		"rhs_t72bd_tv",
+		"rhs_t72bb_tv",
+		"rhs_t72bb_tv",
+		"rhs_t72bb_chdkz",
+		"rhsusf_m1a1fep_d",
+		"rhsusf_m1a1aimd_usarmy",
+		"rhsusf_m1a2sep1d_usarmy",
+		"rhs_sprut_vdv",
 		"rhs_bmp1_vdv",
 		"rhs_bmp1p_vdv",
 		"rhs_bmp1k_msv",
@@ -36,8 +43,6 @@ _setupVars =
 		"rhs_prp3_vdv",
 		"rhs_prp3_msv",
 		"rhs_prp3_vmf",
-		"RHS_M2A2",
-		"RHS_M2A2_BUSKI",
 		"rhs_bmd4_vdv",
 		"rhs_bmd4ma_vdv"
 	] call SGC_fnc_selectRandom;

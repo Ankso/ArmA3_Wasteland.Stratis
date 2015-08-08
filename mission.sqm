@@ -2562,7 +2562,7 @@ class Mission
 		};
 		class Item86
 		{
-			position[]={5502.7461,91.484138,11611.491};
+			position[]={5336.8833,83.040001,10923.203};
 			name="MissionPlane_1";
 			type="Empty";
 			colorName="ColorUNKNOWN";
@@ -2570,7 +2570,7 @@ class Mission
 		};
 		class Item87
 		{
-			position[]={5552.2583,91.381859,11657.901};
+			position[]={5260.4453,83.040001,11001.544};
 			name="MissionPlane_2";
 			type="Empty";
 			colorName="ColorUNKNOWN";
@@ -2578,7 +2578,7 @@ class Mission
 		};
 		class Item88
 		{
-			position[]={5522.0596,94.798744,11688.419};
+			position[]={5981.8525,83.040001,11523.758};
 			name="MissionPlane_3";
 			type="Empty";
 			colorName="ColorUNKNOWN";
@@ -2594,7 +2594,7 @@ class Mission
 		};
 		class Item90
 		{
-			position[]={5490.9111,94.738541,11652.739};
+			position[]={6126.5293,83.040001,11714.757};
 			name="MissionPlane_5";
 			type="Empty";
 			colorName="ColorUNKNOWN";
@@ -2602,7 +2602,7 @@ class Mission
 		};
 		class Item91
 		{
-			position[]={5589.8345,94.574112,11687.276};
+			position[]={6050.1602,83.040001,11794.651};
 			name="MissionPlane_6";
 			type="Empty";
 			colorName="ColorUNKNOWN";
@@ -2618,7 +2618,7 @@ class Mission
 		};
 		class Item93
 		{
-			position[]={5565.0005,94.929848,11723.091};
+			position[]={5728.2656,83.040001,11282.135};
 			name="MissionPlane_8";
 			type="Empty";
 			colorName="ColorUNKNOWN";

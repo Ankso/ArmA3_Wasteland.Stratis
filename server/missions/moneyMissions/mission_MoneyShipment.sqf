@@ -29,15 +29,18 @@ _setupVars =
 			[
 				[ // NATO convoy
 					["rhsusf_m1025_d", "rhsusf_m998_d_s_4dr"], // Veh 1
-					["rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy"] // Veh 2
+					["rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy"], // Veh 2
+					["rhsusf_m1025_d_m2"]
 				],
 				[ // CSAT convoy
 					["rhs_tigr_3camo_msv", "rhs_tigr_ffv_3camo_vmf"], // Veh 1
-					["rhs_gaz66_vdv", "rhs_gaz66_flat_vdv"] // Veh 2
+					["rhs_gaz66_vdv", "rhs_gaz66_flat_vdv"], // Veh 2
+					["rhs_tigr_ffv_3camo_vmf"]
 				],
 				[ // AAF convoy
 					["RHS_UAZ_chdkz", "rhs_uaz_open_chdkz"], // Veh 1
-					["rhs_ural_chdkz", "rhs_ural_open_chdkz"] // Veh 2
+					["rhs_ural_chdkz", "rhs_ural_open_chdkz"], // Veh 2
+					["rhs_tigr_ffv_3camo_vmf"]
 				]
 			]
 		],
@@ -48,15 +51,18 @@ _setupVars =
 			[
 				[ // NATO convoy
 					["rhsusf_m1025_d", "rhsusf_m998_d_s_4dr"], // Veh 1
-					["rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy"] // Veh 2
+					["rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy"], // Veh 2
+					["rhsusf_m1025_d_m2"]
 				],
 				[ // CSAT convoy
 					["rhs_tigr_3camo_msv", "rhs_tigr_ffv_3camo_vmf"], // Veh 1
-					["rhs_gaz66_vdv", "rhs_gaz66_flat_vdv"] // Veh 2
+					["rhs_gaz66_vdv", "rhs_gaz66_flat_vdv"], // Veh 2
+					["rhs_tigr_ffv_3camo_vmf"]
 				],
 				[ // AAF convoy
 					["RHS_UAZ_chdkz", "rhs_uaz_open_chdkz"], // Veh 1
-					["rhs_ural_chdkz", "rhs_ural_open_chdkz"] // Veh 2
+					["rhs_ural_chdkz", "rhs_ural_open_chdkz"], // Veh 2
+					["rhs_tigr_ffv_3camo_vmf"]
 				]
 			]
 		],
@@ -67,15 +73,18 @@ _setupVars =
 			[
 				[ // NATO convoy
 					["rhsusf_m1025_d", "rhsusf_m998_d_s_4dr"], // Veh 1
-					["rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy"] // Veh 2
+					["rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy"], // Veh 2
+					["rhsusf_m1025_d_m2"]
 				],
 				[ // CSAT convoy
 					["rhs_tigr_3camo_msv", "rhs_tigr_ffv_3camo_vmf"], // Veh 1
-					["rhs_gaz66_vdv", "rhs_gaz66_flat_vdv"] // Veh 2
+					["rhs_gaz66_vdv", "rhs_gaz66_flat_vdv"], // Veh 2
+					["rhs_tigr_ffv_3camo_vmf"]
 				],
 				[ // AAF convoy
 					["RHS_UAZ_chdkz", "rhs_uaz_open_chdkz"], // Veh 1
-					["rhs_ural_chdkz", "rhs_ural_open_chdkz"] // Veh 2
+					["rhs_ural_chdkz", "rhs_ural_open_chdkz"], // Veh 2
+					["rhs_tigr_ffv_3camo_vmf"]
 				]
 			]
 		],
@@ -86,15 +95,18 @@ _setupVars =
 			[
 				[ // NATO convoy
 					["rhsusf_m1025_d", "rhsusf_m998_d_s_4dr"], // Veh 1
-					["rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy"] // Veh 2
+					["rhsusf_M1078A1P2_B_d_fmtv_usarmy", "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy"], // Veh 2
+					["rhsusf_m1025_d_m2"]
 				],
 				[ // CSAT convoy
 					["rhs_tigr_3camo_msv", "rhs_tigr_ffv_3camo_vmf"], // Veh 1
-					["rhs_gaz66_vdv", "rhs_gaz66_flat_vdv"] // Veh 2
+					["rhs_gaz66_vdv", "rhs_gaz66_flat_vdv"], // Veh 2
+					["rhs_tigr_ffv_3camo_vmf"]
 				],
 				[ // AAF convoy
 					["RHS_UAZ_chdkz", "rhs_uaz_open_chdkz"], // Veh 1
-					["rhs_ural_chdkz", "rhs_ural_open_chdkz"] // Veh 2
+					["rhs_ural_chdkz", "rhs_ural_open_chdkz"], // Veh 2
+					["rhs_tigr_ffv_3camo_vmf"]
 				]
 			]
 		]

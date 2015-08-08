@@ -24,10 +24,7 @@ _setupObjects =
 
 	_vehicleClass =
 	[
-		"B_Truck_01_ammo_F",
-		"O_Truck_02_fuel_F",
 		"I_Truck_02_fuel_F",
-		"O_Truck_02_Ammo_F",
 		"I_Truck_02_ammo_F"
 	] call SGC_fnc_selectRandom;
 

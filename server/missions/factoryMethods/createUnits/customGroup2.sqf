@@ -50,13 +50,16 @@ for "_i" from 1 to _nbUnits do
 			_unit addWeapon "rhs_weap_akm_gp25";
 			_unit addMagazine "rhs_VOG25";
 			_unit addMagazine "rhs_VOG25";
+			_unit addMagazine "rhs_VOG25";
 		};
 		// RPG every 7 units, starting from second one
 		case ((_i + 5) % 7 == 0):
 		{
 			_unit addBackpack "B_Kitbag_mcamo";
 			_unit addWeapon "rhs_weap_akms";
-			_unit addWeapon "rhs_weap_rpg18";
+			_unit addWeapon "rhs_weap_rpg7";
+			_unit addMagazine "rhs_rpg7_PG7VL_mag";
+			_unit addMagazine "rhs_rpg7_PG7VL_mag";
 		};
 		// Rifleman
 		default

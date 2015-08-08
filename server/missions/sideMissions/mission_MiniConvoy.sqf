@@ -147,7 +147,7 @@ _successExec =
 
 	_box2 = createVehicle ["Box_East_WpsSpecial_F", _lastPos, [], 2, "None"];
 	_box2 setDir random 360;
-	[_box2, (["mission_USSpecial", "mission_Main_A3snipers"] call SGC_fnc_selectRandom)] call fn_refillbox;
+	[_box2, (["mission_Main_A3snipers", "mission_USSpecial", "mission_Main_A3snipers"] call SGC_fnc_selectRandom)] call fn_refillbox;
 
 	_successHintMessage = "The convoy has been stopped, the weapon crates and vehicles are now yours to take.";
 };

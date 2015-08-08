@@ -24,7 +24,9 @@ _setupVars =
 		"I_Heli_light_03_F",
 		"RHS_Mi8AMTSh_UPK23_vvs",
 		"RHS_Mi8MTV3_FAB_vvs",
-		"RHS_Mi24P_CAS_vvs"
+		"RHS_Mi24P_CAS_vvs",
+		"RHS_Mi24V_FAB_vdv",
+		"RHS_Mi24V_UPK23_vdv"
 	] call SGC_fnc_selectRandom;
 
 	_missionType = "Armed Helicopter";

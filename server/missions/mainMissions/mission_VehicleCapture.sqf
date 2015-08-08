@@ -39,7 +39,10 @@ _setupObjects =
             "rhs_bmd2_chdkz", "rhs_bmd1", "rhs_bmd1k",
             "rhs_bmd1pk", "rhs_bmd2m", "rhs_bmd2k",
             "rhs_prp3_vdv", "rhs_prp3_msv", "rhs_prp3_vmf",
-            "RHS_M2A2", "RHS_M2A2_BUSKI", "rhs_bmd4_vdv", "rhs_bmd4ma_vdv"
+            "RHS_M2A2", "RHS_M2A2_BUSKI", "rhs_bmd4_vdv",
+            "rhs_bmd4ma_vdv", "rhs_t72bb_tv", "rhs_t72bb_chdkz",
+            "rhsusf_m1a1fep_d", "rhsusf_m1a1aimd_usarmy", "rhsusf_m1a2sep1d_usarmy",
+            "rhs_sprut_vdv"
         ] > 0):
 		{
 			// Empty the fuel tank
@@ -117,7 +120,10 @@ _setupObjects =
 
 		_vehicle addMagazineTurret ["120Rnd_CMFlare_Chaff_Magazine", [-1]];
 	};
-
+    
+    // Disable TI equipment
+	_vehicle disableTIEquipment true;
+	
 	reload _vehicle;
 
 	_aiGroup = createGroup CIVILIAN;

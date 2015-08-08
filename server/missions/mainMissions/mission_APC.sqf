@@ -28,12 +28,6 @@ _setupVars =
 		"rhs_btr80a_msv",
 		"rhs_btr80a_vv",
 		"rhs_btr70_chdkz",
-		"rhsusf_m113_usarmy",
-		"rhsusf_m113d_usarmy",
-		"rhsusf_m113_usarmy",
-		"rhsusf_m113d_usarmy",
-		"rhs_zsu234_aa",
-		"rhs_zsu234_chdkz",
 		"rhs_zsu234_aa",
 		"rhs_zsu234_chdkz"
 	] call SGC_fnc_selectRandom;
